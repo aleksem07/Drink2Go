@@ -23,6 +23,12 @@
   }
 }
 
+.index-page {
+  max-width: $width-desktop;
+  width: 100%;
+  margin: 0 auto;
+}
+
 @include media('min', 'xl') {
   .page-main {
     margin-inline: 41px 88px;

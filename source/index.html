@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Drink2Go</title><meta name="description" content = ''>
-<link rel="preload" href="css/style.min.css" as="style">
+    <title>Drink2Go</title><link rel="preload" href="css/style.css" as="style">
 <link rel="stylesheet" type="text/css" href="css/style.css" >
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <link rel="manifest" href="img/favicon/manifest.webmanifest">
@@ -15,54 +14,95 @@
 <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
   </head>
   <body class="page__body">
-    <header class="header"><a class="header__logo logo">
-        <div class="logo__img">
-          <picture>
-            <source media="(min-width: 1440px)" srcset="
+    <header class="header">
+      <div class="wrapper"><a class="header__logo logo">
+          <div class="logo__img">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="
       http://dummyimage.com/300/00ffdd&amp;text=logo 1x,
       http://dummyimage.com/300/11ffdd&amp;text=logo 2x'">
-            <source media="(min-width: 768px)" srcset="
+              <source media="(min-width: 768px)" srcset="
       http://dummyimage.com/200/ff00dd&amp;text=logo 1x,
       http://dummyimage.com/200/ff11dd&amp;text=logo 2x'"><img src="img/logo/logo.svg" srcset="
       img/logo/logo.svg 1x,
       img/logo/logo@2x.svg 2x'" width="32px" height="36px" alt="Логотип компании">
-          </picture>
-        </div>
-        <p class="logo__title">Drink</p>
-        <p class="logo__tagline">go</p></a>
-      <nav class="header__menu menu-nav">
-        <button class="menu-nav__button menu__button--open" type="button" aria-expanded="false" aria-controls="menu-nav__list">
-          <svg class="menu-nav__icon" aria-hidden="true" width="16" height="16">
-              <use class="menu-nav__icon-menu" href="img/sprite.svg#menu"></use>
-              <use class="menu-nav__icon-cross" href="img/sprite.svg#cross"></use>
-          </svg>
-          
-        </button>
-        <ul class="menu-nav__list menu-site" id="menu-nav__list">
-              <li class="menu-nav__item menu-site__item"><a class="menu-nav__link menu-site__link menu-site__link--active">Главная</a>
-              </li>
-              <li class="menu-nav__item menu-site__item"><a class="menu-nav__link menu-site__link" href="catalog.html" rel="noopener noreferrer">Каталог</a>
-              </li>
-              <li class="menu-nav__item menu-site__item"><a class="menu-nav__link menu-site__link" href="delivery.html" rel="noopener noreferrer">Доставка</a>
-              </li>
-              <li class="menu-nav__item menu-site__item"><a class="menu-nav__link menu-site__link" href="about.html" rel="noopener noreferrer">О нас</a>
-              </li>
-        </ul>
-        <ul class="menu-nav__list menu-user" id="menu-nav__list">
-              <li class="menu-nav__item menu-user__item"><a class="menu-nav__link menu-user__link" href="#" rel="noopener noreferrer">
-                  <h2 class="visually-hidden">Личный кабинет</h2><svg width="17" height="17" viewBox="0 0 17 17">
+            </picture>
+          </div>
+          <p class="logo__title">Drink</p>
+          <p class="logo__tagline">go</p></a>
+        <nav class="header__menu menu-nav">
+          <button class="menu-nav__button menu__button--open" type="button" aria-expanded="false" aria-controls="menu-nav__list">
+            <svg class="menu-nav__icon" aria-hidden="true" width="16" height="16">
+                <use class="menu-nav__icon-menu" href="img/sprite.svg#menu"></use>
+                <use class="menu-nav__icon-cross" href="img/sprite.svg#cross"></use>
+            </svg>
+            
+          </button>
+          <ul class="menu-nav__list menu-site" id="menu-nav__list">
+                <li class="menu-nav__item menu-site__item"><a class="menu-nav__link menu-site__link menu-site__link--active">Главная</a>
+                </li>
+                <li class="menu-nav__item menu-site__item"><a class="menu-nav__link menu-site__link" href="catalog.html" rel="noopener noreferrer">Каталог</a>
+                </li>
+                <li class="menu-nav__item menu-site__item"><a class="menu-nav__link menu-site__link" href="delivery.html" rel="noopener noreferrer">Доставка</a>
+                </li>
+                <li class="menu-nav__item menu-site__item"><a class="menu-nav__link menu-site__link" href="about.html" rel="noopener noreferrer">О нас</a>
+                </li>
+          </ul>
+          <ul class="menu-nav__list menu-user" id="menu-nav__list">
+                <li class="menu-nav__item menu-user__item"><a class="menu-nav__link menu-user__link" href="#" rel="noopener noreferrer">
+                    <h2 class="visually-hidden">Личный кабинет</h2><svg width="17" height="17" viewBox="0 0 17 17">
 <use xlink:href="../img/sprite.svg#Navigation-user"></use>
 </svg></a></li>
-              <li class="menu-nav__item menu-user__item"><a class="menu-nav__link menu-user__link" href="#" rel="noopener noreferrer">
-                  <h2 class="visually-hidden">Корзтна</h2><svg width="17" height="17" viewBox="0 0 17 17">
+                <li class="menu-nav__item menu-user__item"><a class="menu-nav__link menu-user__link" href="#" rel="noopener noreferrer">
+                    <h2 class="visually-hidden">Корзтна</h2><svg width="17" height="17" viewBox="0 0 17 17">
 <use xlink:href="../img/sprite.svg#Navigation-Union"></use>
 </svg></a></li>
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main class="index-page">
-      <section class="intro">
-        <div class="wrapper"></div>
+      <section class="slider">
+        <div class="wrapper"><img class="slider__image" src="img/slider/flat_white.webp">
+          <h4 class="h4 slider__badge">Новинка!</h4>
+          <h2 class="h2 slider__title">Декаф Флэт Уайт</h2>
+          <p class="slider__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+          <div class="slider__buy buy">
+            <s class="buy__old-price">295₽</s>
+            <p class="buy__new-price">225₽</p>
+                <button class="button" type="button"><span class="button__text">Заказать</span></button>
+          </div>
+        </div>
+      </section>
+      <section class="features">
+        <div class="wrapper">
+          <h4 class="h4 features__badge">Преимущества</h4>
+          <h2 class="h2 features__title">Главные причины выбрать Drink2Go</h2>
+          <ul class="features__list">
+                <li class="features__item"><img class="features__img" src="img/features/icon_speed.webp" width="52" height="56" alt="">
+                  <h3 class="h3 features__title">Скорость</h3>
+                  <p class="features__description">Готовый напиток всегда под рукой — просто открой банку</p>
+                </li>
+                <li class="features__item"><img class="features__img" src="img/features/icon_convenience.webp" width="52" height="56" alt="">
+                  <h3 class="h3 features__title">Удобство</h3>
+                  <p class="features__description">Легко помещается и в карман, и в маленькую сумочку</p>
+                </li>
+                <li class="features__item"><img class="features__img" src="img/features/icon_cheerfulness.webp" width="52" height="56" alt="">
+                  <h3 class="h3 features__title">Бодрость</h3>
+                  <p class="features__description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+                </li>
+                <li class="features__item"><img class="features__img" src="img/features/icon_eco.webp" width="52" height="56" alt="">
+                  <h3 class="h3 features__title">Экологичность</h3>
+                  <p class="features__description">Вся упаковка сделана из перерабатываемых материалов</p>
+                </li>
+          </ul>
+        </div>
+      </section>
+      <section class="catalog">
+        <div class="wrapper">
+          <h4 class="h4 catalog__badge">Каталог</h4>
+          <h2 class="h2 catalog__title">Каталог кофейных напитков</h2>
+        </div>
       </section>
     </main>
     <footer class="footer">

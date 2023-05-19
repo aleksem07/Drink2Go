@@ -1,10 +1,9 @@
 .h2 {
+  @include media('min', 'md') {
+    @include font(4.2rem, 64px, 700);
+  }
   @include media('max', 'md') {
     @include font(2.4rem, 36px, 700);
-  }
-
-  @include media('max', 'xl') {
-    @include font(4.2rem, 64px, 700);
   }
 }
 

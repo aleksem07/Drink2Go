@@ -39,3 +39,9 @@ mixin footer-store(title, href)
       a.link-item__title(href=href rel="noopener noreferrer") #{title}
     else
       a.link-item__title #{title}
+
+mixin features(src, title, description)
+  li.features__item
+    img.features__img(src=`img/features/${src}.webp` width=52 height=56 alt='')
+    h3.h3.features__title #{title}
+    p.features__description #{description}

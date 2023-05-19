@@ -4,6 +4,10 @@
   width: 100%;
   max-width: max-content;
   @extend %transition;
+  background: $color-base-primary;
+  color: $color-base-white;
+  padding: 8px 20px;
+  border-radius: 4px;
 }
 
 /* menu */

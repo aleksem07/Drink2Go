@@ -1,0 +1,23 @@
+.features {
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+
+.features .wrapper {
+  display: grid;
+  justify-items: center;
+}
+
+.features__title {
+  text-align: center;
+}
+
+.features__item {
+  display: grid;
+  justify-items: center;
+}
+
+.features__description {
+  text-align: center;
+  @include font(1.4rem, 2rem);
+}
