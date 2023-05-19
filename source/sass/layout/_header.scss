@@ -1,0 +1,35 @@
+/* header */
+
+.header {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-width: $width-mobile-small;
+  max-width: $width-desktop;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  column-gap: 50px;
+  margin-inline: auto;
+  padding-block: 12px;
+  padding-inline: $wrapper-inline;
+}
+
+.header__phone {
+  position: relative;
+  margin-top: 4px;
+  margin-right: auto;
+  @include font(1.6rem, 125%, 600);
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: -25px;
+    width: 21px;
+    height: 21px;
+    background-image: url('../../img/icons/phone.svg');
+    background-repeat: no-repeat;
+    background-size: 20px 21px;
+    content: url('');
+  }
+}

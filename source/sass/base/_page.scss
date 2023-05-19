@@ -1,0 +1,30 @@
+@use './abstract' as *;
+
+/* page */
+
+.page {
+  height: 100%;
+  font-family: $font-family-default;
+  font-size: 10px;
+}
+
+.page__body {
+  padding: 0;
+  margin: 0 auto;
+  min-width: $width-mobile-small;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: $color-basic_font;
+  @include font(1.6rem, 2rem);
+
+  @include media('min', 'md') {
+    min-width: $width-tablet;
+  }
+}
+
+@include media('min', 'xl') {
+  .page-main {
+    margin-inline: 41px 88px;
+  }
+}

@@ -1,0 +1,42 @@
+/* menu */
+
+.menu-nav {
+  display: flex;
+  flex: 0 1 140px;
+  justify-content: start;
+  column-gap: 15%;
+}
+
+/* list */
+
+.menu-nav__list {
+  display: flex;
+  column-gap: 44px;
+  align-self: center;
+  padding: 0;
+  margin: 0;
+  margin-right: auto;
+  font-size: 12px;
+  list-style: none;
+}
+
+.menu-site {
+  @include media('max', 'md') {
+    display: none;
+  }
+}
+
+/* item */
+
+.menu-nav__item {
+  text-transform: uppercase;
+  @include font(1.6rem, 125%, 400);
+}
+
+/* link */
+
+.menu-site__link--active {
+  padding-bottom: 3px;
+  border-bottom: 2px solid grey;
+  font-weight: bold;
+}

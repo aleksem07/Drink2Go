@@ -1,0 +1,41 @@
+/* logo */
+
+.logo {
+  display: grid;
+  column-gap: 8px;
+  grid-template-columns: min-content 1fr;
+
+  transition: all 0.3s;
+}
+
+.logo__img {
+  width: 40px;
+  height: 40px;
+
+  @include media('max', 'md') {
+    grid-row: span 2;
+  }
+}
+
+@include media('max', 'md') {
+  .logo__title,
+  .logo__tagline {
+    display: none;
+  }
+}
+
+.logo__title {
+  margin: 0;
+
+  @include media('min', 'md') {
+    align-self: center;
+  }
+}
+
+.logo__tagline {
+  margin: 0;
+
+  @include media('min', 'md') {
+    display: none;
+  }
+}

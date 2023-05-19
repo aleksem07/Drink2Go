@@ -1,0 +1,19 @@
+doctype html
+html.page(lang='ru-RU')
+
+  include head
+
+  body.page__body
+
+      include ../modules/header
+
+      block content
+
+      include ../modules/footer
+
+      block scripts
+
+      script(src="js/main.js" type='module')
+
+      script(src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js")
+      script(src="js/map-leaflet.js")

@@ -1,0 +1,89 @@
+// авто размер картинки
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: $color-basic_font;
+  text-decoration: none;
+}
+
+ul,
+li {
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+p {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+fieldset {
+  height: auto;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+input:focus {
+  border: 2px solid $color-basic_font;
+}
+
+iframe {
+  min-width: 100%;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+section,
+main,
+footer,
+header,
+article {
+  display: block;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  white-space: nowrap;
+}
+
+// плавное затухание
+input:focus::placeholder {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}

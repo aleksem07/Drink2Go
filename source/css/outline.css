@@ -1,0 +1,272 @@
+@font-face {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Montserrat-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Montserrat-Bold.woff') format('woff');
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+body {
+  min-width: 430px;
+  border: 2px dashed #c7e4ff;
+}
+
+html::before,
+body::before,
+header::before,
+footer::before,
+main::before {
+  color: #7fc1ff;
+}
+
+main,
+header,
+footer {
+  border: 2px solid #7fc1ff;
+  background-color: #f3faff;
+}
+
+nav,
+section,
+article,
+aside,
+form {
+  border: 2px solid #9779ec;
+  background-color: #f9f7ff;
+}
+
+nav::before,
+section::before,
+article::before,
+form::before,
+aside::before {
+  color: #9779ec;
+}
+
+h1,
+h2,
+h3,
+h4,
+h6 {
+  border: 2px solid #ff994f;
+  background-color: #fff;
+  font-size: 18px;
+}
+
+h1::before {
+  color: #ff994f;
+  content: 'h1';
+}
+
+h2::before {
+  color: #ff994f;
+  content: 'h2';
+}
+
+h3::before {
+  color: #ff994f;
+  content: 'h3';
+}
+
+h4::before {
+  color: #ff994f;
+  content: 'h4';
+}
+
+h5::before {
+  color: #ff994f;
+  content: 'h5';
+}
+
+h6::before {
+  color: #ff994f;
+  content: 'h6';
+}
+
+img,
+a,
+cite,
+time,
+p,
+blockquote,
+address,
+fieldset,
+ul,
+ol,
+dl,
+dt,
+dd,
+li {
+  border: 2px solid #f36dff;
+  background-color: #fff;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+p::before {
+  color: #f36dff;
+  content: 'p';
+}
+
+blockquote::before {
+  color: #f36dff;
+  content: 'blockquote';
+}
+
+address::before {
+  color: #f36dff;
+  content: 'address';
+}
+
+fieldset::before {
+  left: 0;
+  color: #f36dff;
+  content: 'fieldset';
+}
+
+* {
+  position: relative;
+  padding: 25px 25px 20px;
+  margin: 0;
+  border-radius: 4px;
+}
+
+*:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+*::before,
+* > *::before,
+* > * > *::before {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 10px;
+}
+
+html::before {
+  content: 'html';
+}
+
+body::before {
+  content: 'body';
+}
+
+main::before {
+  content: 'main';
+}
+
+header::before {
+  content: 'header';
+}
+
+footer::before {
+  content: 'footer';
+}
+
+section::before {
+  content: 'section';
+}
+
+article::before {
+  content: 'article';
+}
+
+form::before {
+  content: 'form';
+}
+
+aside::before {
+  content: 'aside';
+}
+
+nav::before {
+  content: 'nav';
+}
+
+ul::before {
+  color: #f36dff;
+  content: 'ul';
+}
+
+li::before {
+  color: #f36dff;
+  content: 'li';
+}
+
+dl::before {
+  color: #f36dff;
+  content: 'dl';
+}
+
+dt::before {
+  color: #f36dff;
+  content: 'dt';
+}
+
+dd::before {
+  color: #f36dff;
+  content: 'dd';
+}
+
+a::before {
+  color: #f36dff;
+  content: 'a';
+}
+
+cite::before {
+  color: #f36dff;
+  content: 'cite';
+}
+
+time::before {
+  color: #f36dff;
+  content: 'time';
+}
+
+img {
+  background: rgb(243 109 255 / 10%);
+}
+
+a {
+  display: inline-block;
+}
+
+select {
+  padding: 10px;
+}
+
+input {
+  padding: 10px;
+}

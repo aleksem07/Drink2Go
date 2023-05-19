@@ -1,0 +1,23 @@
+include ../mixins/mixins
+
+header.header
+  include logo
+
+  nav.header__menu.menu-nav
+
+    button.menu-nav__button.menu__button--open(type='button' aria-expanded='false' aria-controls='menu-nav__list')
+      .
+        <svg class="menu-nav__icon" aria-hidden="true" width="16" height="16">
+            <use class="menu-nav__icon-menu" href="img/sprite.svg#menu"></use>
+            <use class="menu-nav__icon-cross" href="img/sprite.svg#cross"></use>
+        </svg>
+
+    ul.menu-nav__list.menu-site#menu-nav__list
+      +site-nav('Главная', href=pageClass === 'index-page' ? false : 'index.html')
+      +site-nav('Каталог', href=pageClass === 'catalog-page' ? false : 'catalog.html')
+      +site-nav('Доставка', href=pageClass === 'catalog-page' ? false : 'delivery.html')
+      +site-nav('О нас', href=pageClass === 'catalog-page' ? false : 'about.html')
+
+    ul.menu-nav__list.menu-user#menu-nav__list
+      +user-nav('Личный кабинет', 'Navigation-user', '#')
+      +user-nav('Корзтна', 'Navigation-Union', '#')

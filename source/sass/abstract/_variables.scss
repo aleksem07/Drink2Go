@@ -1,0 +1,14 @@
+$width-mobile-small: 320px;
+$width-mobile-big: 414px;
+$width-tablet: 768px;
+$width-content: 1200px;
+$width-desktop: 1440px;
+
+// .block1 {
+// padding: 10px;
+// @media screen and (max-width: $desktop-width) {
+// padding: 20px;
+// }
+// }
+
+$wrapper-inline: calc(20px / 320px * 100%);

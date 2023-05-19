@@ -1,0 +1,32 @@
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+//.box { @include transform(rotate(30deg)); }
+
+@mixin flex($align: center, $wrap: wrap) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: $align;
+  justify-content: $align;
+}
+
+@mixin colimns($width) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  > * {
+    flex-basis: $width;
+  }
+}
+
+//.block {@include flex(flex-start, $wrap: no-wrap);}
+
+@mixin font($size, $height: $size, $weigth: 400, $style: normal) {
+  font-size: $size;
+  font-weight: $weigth;
+  line-height: $height;
+  font-style: $style;
+}

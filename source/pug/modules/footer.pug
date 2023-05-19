@@ -1,0 +1,37 @@
+include ../mixins/mixins
+
+footer.footer
+  .footer__map-leaflet(id="map-leaflet")
+
+  .footer__wrapper.footer__list
+    .wrapper
+      ul.footer__block-list.footer__social-list
+          include logo
+          +social('VK', 'VK')
+          +social('Pinterest', 'Pinterest')
+          +social('OK', 'OK')
+
+    .footer__item
+      .wrapper
+        h4.h4 Интернет-магазин
+        ul.footer__block-list.footer__store-list.store-links
+          +footer-store('Каталог', href=pageClass === 'catalog-page' ? false : '#')
+          +footer-store('Доставка', href=pageClass === 'delivery-page' ? false : '#')
+          +footer-store('Способы оплаты', href=pageClass === 'pay-page' ? false : '#')
+          +footer-store('О нас', href=pageClass === 'about-page' ? false : '#')
+    .footer__item
+      .wrapper
+        h4.h4 Медиа
+        ul.footer__block-list.footer__media-list.media-links
+          +footer-store('Блог', href=pageClass === 'catalog-page' ? false : '#')
+          +footer-store('Информация для СМИ', href=pageClass === 'delivery-page' ? false : '#')
+          +footer-store('Правовая информация', href=pageClass === 'pay-page' ? false : '#')
+    .footer__item
+      .wrapper
+        h4.h4 Контакты
+        ul.footer__block-list.footer__contacts-list.contacts
+          li.contacts__adress Санкт-Петербург, набережная реки Карповки, дом 5
+          li.contacts__phone +7 (999) 999-99-99
+
+    .footer__copyright
+      span Разработано в HTML Academy
