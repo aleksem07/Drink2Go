@@ -7,6 +7,7 @@
     <title>Drink2Go</title><link rel="preload" href="css/style.css" as="style">
 <link rel="stylesheet" type="text/css" href="css/style.css" >
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<link rel="stylesheet" href="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.css">
 <link rel="manifest" href="img/favicon/manifest.webmanifest">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
@@ -51,11 +52,11 @@
           <ul class="menu-nav__list menu-user" id="menu-nav__list">
                 <li class="menu-nav__item menu-user__item"><a class="menu-nav__link menu-user__link" href="#" rel="noopener noreferrer">
                     <h2 class="visually-hidden">Личный кабинет</h2><svg width="17" height="17" viewBox="0 0 17 17">
-<use xlink:href="../img/sprite.svg#Navigation-user"></use>
+<use xlink:href="img/sprite.svg#Navigation-user"></use>
 </svg></a></li>
                 <li class="menu-nav__item menu-user__item"><a class="menu-nav__link menu-user__link" href="#" rel="noopener noreferrer">
                     <h2 class="visually-hidden">Корзтна</h2><svg width="17" height="17" viewBox="0 0 17 17">
-<use xlink:href="../img/sprite.svg#Navigation-Union"></use>
+<use xlink:href="img/sprite.svg#Navigation-Union"></use>
 </svg></a></li>
           </ul>
         </nav>
@@ -102,6 +103,133 @@
         <div class="wrapper">
           <h4 class="h4 catalog__badge">Каталог</h4>
           <h2 class="h2 catalog__title">Каталог кофейных напитков</h2>
+          <section class="filter">
+            <form class="filter__form form" action="#">
+              <fieldset class="form__section">
+                <legend class="filter__price">Цена</legend>
+                <div class="form__slider" id="form-slider"></div>
+                <label class="form__slider__min-label">
+                  <input class="form__slider__min-input">
+                </label>
+                <label class="slidform__sliderer__max-label">
+                  <input class="form__slider__max-input">
+                </label>
+              </fieldset>
+              <fieldset class="form__section">
+                <legend class="filter__milk">Наличие молока</legend>
+                      <div class="catalog-filter__box catalog-filter__box--radio">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__radio" name="milk" value="Неважно" id="milk" checked type="radio"><span>Неважно</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__box catalog-filter__box--radio">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__radio" name="milk" value="Только животные" id="milk" type="radio"><span>Только животные</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__box catalog-filter__box--radio">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__radio" name="milk" value="Только растительные" id="milk" type="radio"><span>Только растительные</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__box catalog-filter__box--radio">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__radio" name="milk" value="Без молока" id="milk" type="radio" disabled><span>Без молока</span>
+                        </label>
+                      </div>
+              </fieldset>
+              <fieldset class="form__section">
+                <legend class="filter__country">Страна произрастания</legend>
+                      <div class="catalog-filter__box">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" name="country" checked type="checkbox"><span>Бразилия</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__box">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" name="country" type="checkbox"><span>Эфиопия</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__box">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" name="country" type="checkbox"><span>Колумбия</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__box">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" name="country" type="checkbox"><span>Коста-Рика</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__box">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" name="country" type="checkbox" disabled><span>Перу</span>
+                        </label>
+                      </div>
+              </fieldset>
+                  <button class="button" type="button"><span class="button__text">Применить</span></button>
+                  <button class="button" type="button"><span class="button__text">Сбросить</span></button>
+            </form>
+          </section>
+          <section class="cards">
+            <legend class="cards__sort">Сортировка:</legend>
+            <select class="cards__sort-select">
+              <option class="cards__sort-option">По умолчанию</option>
+            </select>
+            <ul class="cards__list">
+                  <li class="card__item card"><img class="card__image" src="img/catalog/coffee_can1.webp" width="130" height="188" alt="Баночка кофе">
+                    <h3 class="h3 card__title">Декаф Флэт Уайт</h3>
+                    <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                    <p class="card__price">225₽</p>
+                        <button class="button card__button" type="button"><span class="button__text">В корзину</span></button>
+                  </li>
+                  <li class="card__item card"><img class="card__image" src="img/catalog/coffee_can2.webp" width="130" height="188" alt="Баночка кофе">
+                    <h3 class="h3 card__title">Декаф Флэт Уайт</h3>
+                    <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                    <p class="card__price">225₽</p>
+                        <button class="button card__button" type="button"><span class="button__text">В корзину</span></button>
+                  </li>
+                  <li class="card__item card"><img class="card__image" src="img/catalog/coffee_can3.webp" width="130" height="188" alt="Баночка кофе">
+                    <h3 class="h3 card__title">Декаф Флэт Уайт</h3>
+                    <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                    <p class="card__price">225₽</p>
+                        <button class="button card__button" type="button"><span class="button__text">В корзину</span></button>
+                  </li>
+                  <li class="card__item card"><img class="card__image" src="img/catalog/coffee_can4.webp" width="130" height="188" alt="Баночка кофе">
+                    <h3 class="h3 card__title">Декаф Флэт Уайт</h3>
+                    <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                    <p class="card__price">225₽</p>
+                        <button class="button card__button" type="button"><span class="button__text">В корзину</span></button>
+                  </li>
+                  <li class="card__item card"><img class="card__image" src="img/catalog/coffee_can5.webp" width="130" height="188" alt="Баночка кофе">
+                    <h3 class="h3 card__title">Декаф Флэт Уайт</h3>
+                    <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                    <p class="card__price">225₽</p>
+                        <button class="button card__button" type="button"><span class="button__text">В корзину</span></button>
+                  </li>
+                  <li class="card__item card"><img class="card__image" src="img/catalog/coffee_can6.webp" width="130" height="188" alt="Баночка кофе">
+                    <h3 class="h3 card__title">Декаф Флэт Уайт</h3>
+                    <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                    <p class="card__price">225₽</p>
+                        <button class="button card__button" type="button"><span class="button__text">В корзину</span></button>
+                  </li>
+            </ul>
+            <ul class="pagination">
+                    <li class="pagination__item"><a class="pagination__link pagination__link--arrow" href="#" title="Перейти на следующую страницу"><span class="visually-hidden">Перейти на следующую страницу</span><svg width='14' height='10' viewBox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+                        <path d='M8.46967 1.53033C8.17678 1.23744 8.17678 0.762563 8.46967 0.46967C8.76256 0.176777 9.23744 0.176777 9.53033 0.46967L13.5303 4.46967C13.8232 4.76256 13.8232 5.23744 13.5303 5.53033L9.53033 9.53033C9.23744 9.82322 8.76256 9.82322 8.46967 9.53033C8.17678 9.23744 8.17678 8.76256 8.46967 8.46967L11.1893 5.75H1.5C1.08579 5.75 0.75 5.41421 0.75 5C0.75 4.58579 1.08579 4.25 1.5 4.25H11.1893L8.46967 1.53033Z' />
+                        </svg></a>
+                    </li>
+                    <li class="pagination__item"><a class="pagination__link" href="#" title="'Перейти на страницу № 1'">1</a>
+                    </li>
+                    <li class="pagination__item"><a class="pagination__link pagination__link--active" title="'Текущая страница № 2'">2</a>
+                    </li>
+                    <li class="pagination__item"><a class="pagination__link" href="#" title="'Перейти на страницу № 3'">3</a>
+                    </li>
+                    <li class="pagination__item"><a class="pagination__link pagination__link--arrow" href="#" title="Перейти на следующую страницу"><span class="visually-hidden">Перейти на следующую страницу</span><svg width='14' height='10' viewBox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+                        <path d='M8.46967 1.53033C8.17678 1.23744 8.17678 0.762563 8.46967 0.46967C8.76256 0.176777 9.23744 0.176777 9.53033 0.46967L13.5303 4.46967C13.8232 4.76256 13.8232 5.23744 13.5303 5.53033L9.53033 9.53033C9.23744 9.82322 8.76256 9.82322 8.46967 9.53033C8.17678 9.23744 8.17678 8.76256 8.46967 8.46967L11.1893 5.75H1.5C1.08579 5.75 0.75 5.41421 0.75 5C0.75 4.58579 1.08579 4.25 1.5 4.25H11.1893L8.46967 1.53033Z' />
+                        </svg></a>
+                    </li>
+            </ul>
+          </section>
         </div>
       </section>
     </main>
@@ -184,5 +312,6 @@
     <script src="js/main.js" type="module"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="js/map-leaflet.js"></script>
+    <script src="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.js"></script>
   </body>
 </html>

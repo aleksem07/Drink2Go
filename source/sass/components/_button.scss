@@ -2,7 +2,6 @@
 
 .button {
   width: 100%;
-  max-width: max-content;
   @extend %transition;
   background: $color-base-primary;
   color: $color-base-white;

@@ -10,7 +10,7 @@ mixin social-link(title, svgName, href)
     a.menu-nav__link.menu-user__link(href=href rel="noopener noreferrer")
       h2.visually-hidden #{title}
       <svg width="20" height="20" viewBox="0 0 19 19">
-      <use xlink:href="../img/sprite.svg##{svgName}"></use>
+      <use xlink:href="img/sprite.svg##{svgName}"></use>
       </svg>
 
 mixin user-nav(title, svgName, href)
@@ -18,7 +18,7 @@ mixin user-nav(title, svgName, href)
     a.menu-nav__link.menu-user__link(href=href rel="noopener noreferrer")
       h2.visually-hidden #{title}
       <svg width="17" height="17" viewBox="0 0 17 17">
-      <use xlink:href="../img/sprite.svg##{svgName}"></use>
+      <use xlink:href="img/sprite.svg##{svgName}"></use>
       </svg>
 
 mixin social(svg, title, href='#')
@@ -45,3 +45,11 @@ mixin features(src, title, description)
     img.features__img(src=`img/features/${src}.webp` width=52 height=56 alt='')
     h3.h3.features__title #{title}
     p.features__description #{description}
+
+mixin card(src, title, description, price)
+  li.card__item.card
+    img.card__image(src=`img/catalog/${src}.webp` width=130 height=188 alt='Баночка кофе')
+    h3.h3.card__title #{title}
+    p.card__description #{description}
+    p.card__price #{price}
+    +button('В корзину')(class="card__button")

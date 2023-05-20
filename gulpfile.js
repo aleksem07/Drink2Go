@@ -46,7 +46,7 @@ const stylesBuild = () => {
     .pipe(sync.stream());
 };
 
-exports.styles = styles;
+exports.stylesBuild = stylesBuild;
 
 // HTML
 

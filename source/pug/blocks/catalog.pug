@@ -1,4 +1,56 @@
+include ../mixins/input
+include ../mixins/pagination
+
 section.catalog
   .wrapper
     h4.h4.catalog__badge Каталог
     h2.h2.catalog__title Каталог кофейных напитков
+    section.filter
+      form.filter__form.form(action="#")
+
+        fieldset.form__section
+          legend.filter__price Цена
+          .form__slider(id="form-slider")
+          label.form__slider__min-label
+            input.form__slider__min-input
+          label.slidform__sliderer__max-label
+            input.form__slider__max-input
+
+        fieldset.form__section
+          legend.filter__milk Наличие молока
+          +input('radio', 'milk', "Неважно", true)
+          +input('radio', 'milk', "Только животные")
+          +input('radio', 'milk', "Только растительные")
+          +input('radio', 'milk', "Без молока")(disabled)
+
+        fieldset.form__section
+          legend.filter__country Страна произрастания
+          +input('checkbox', 'country', "Бразилия", true)
+          +input('checkbox', 'country', "Эфиопия")
+          +input('checkbox', 'country', "Колумбия")
+          +input('checkbox', 'country', "Коста-Рика")
+          +input('checkbox', 'country', "Перу")(disabled)
+
+        +button("Применить")
+        +button("Сбросить")
+
+    section.cards
+      legend.cards__sort Сортировка:
+      select.cards__sort-select
+        option.cards__sort-option По умолчанию
+
+      ul.cards__list
+        +card('coffee_can1', 'Декаф Флэт Уайт', 'Кофе без кофеина из Эфиопии с натуральным фермерским молоком', '225₽')
+        +card('coffee_can2', 'Декаф Флэт Уайт', 'Кофе без кофеина из Эфиопии с натуральным фермерским молоком', '225₽')
+        +card('coffee_can3', 'Декаф Флэт Уайт', 'Кофе без кофеина из Эфиопии с натуральным фермерским молоком', '225₽')
+        +card('coffee_can4', 'Декаф Флэт Уайт', 'Кофе без кофеина из Эфиопии с натуральным фермерским молоком', '225₽')
+        +card('coffee_can5', 'Декаф Флэт Уайт', 'Кофе без кофеина из Эфиопии с натуральным фермерским молоком', '225₽')
+        +card('coffee_can6', 'Декаф Флэт Уайт', 'Кофе без кофеина из Эфиопии с натуральным фермерским молоком', '225₽')
+
+      ul.pagination
+        +pagination('влево', '#', false, true)
+        +pagination('1', '#', false)
+        +pagination('2', '#', true)
+        +pagination('3', '#', false)
+        +pagination('вправо', '#', false, true)
+
