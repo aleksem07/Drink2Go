@@ -41,15 +41,17 @@ mixin footer-store(title, href)
       a.link-item__title #{title}
 
 mixin features(src, title, description)
-  li.features__item
-    img.features__img(src=`img/features/${src}.webp` width=52 height=56 alt='')
-    h3.h3.features__title #{title}
-    p.features__description #{description}
+  li.features__item.feature&attributes(attributes)
+    img.feature__img(src=`img/features/${src}.webp` width=52 height=56 alt='')
+    h3.h3.feature__title #{title}
+    p.feature__description #{description}
+    if block
+      block
 
 mixin card(src, title, description, price)
   li.card__item.card
     img.card__image(src=`img/catalog/${src}.webp` width=130 height=188 alt='Баночка кофе')
     h3.h3.card__title #{title}
     p.card__description #{description}
-    p.card__price #{price}
+    p.card__price.actual-price #{price}
     +button('В корзину')(class="card__button")

@@ -1,9 +1,11 @@
 section.features
   .wrapper
-    h4.h4.features__badge Преимущества
+    h4.h4.features__badge.badge Преимущества
     h2.h2.features__title Главные причины выбрать Drink2Go
     ul.features__list
       +features("icon_speed", 'Скорость', 'Готовый напиток всегда под рукой — просто открой банку')
       +features("icon_convenience", 'Удобство', 'Легко помещается и в карман, и в маленькую сумочку')
       +features("icon_cheerfulness", 'Бодрость', 'Сбалансированная доза кофеина даст мощный заряд энергии')
-      +features("icon_eco", 'Экологичность', 'Вся упаковка сделана из перерабатываемых материалов')
+      +features("icon_eco", 'Экологичность', 'Вся упаковка сделана')(class='eco')
+        span.feature__description из перерабатываемых материалов
+

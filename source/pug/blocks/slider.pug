@@ -1,10 +1,13 @@
 section.slider
   .wrapper
-    img.slider__image(src="img/slider/flat_white.webp")
-    h4.h4.slider__badge Новинка!
-    h2.h2.slider__title Декаф Флэт Уайт
-    p.slider__description Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня
-    .slider__buy.buy
-      s.buy__old-price 295₽
-      p.buy__new-price 225₽
-      +button("Заказать")
+    .slider__arrow-left
+    .slider__content
+      img.slider__image(src="img/slider/flat_white.webp")
+      h4.h4.slider__badge.badge Новинка!
+      h2.h2.slider__title Декаф Флэт Уайт
+      p.slider__description.description Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня
+      .slider__buy.buy
+        s.buy__old-price 295₽
+        p.buy__new-price.actual-price 225₽
+        +button("Заказать")
+    .slider__arrow-right

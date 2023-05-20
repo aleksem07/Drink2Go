@@ -1,4 +1,6 @@
 .h2 {
+  letter-spacing: 0.5px;
+  text-align: center;
   @include media('min', 'md') {
     @include font(4.2rem, 64px, 700);
   }
@@ -18,7 +20,7 @@
 }
 
 .h4 {
-  @include font(1.4rem, 20px, 700);
-  letter-spacing: 2%;
+  @include font(1.2rem, 16px, 700);
+  letter-spacing: 0.5px;
   color: $color-base-primary;
 }

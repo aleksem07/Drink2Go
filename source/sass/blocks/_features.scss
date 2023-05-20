@@ -5,19 +5,56 @@
 
 .features .wrapper {
   display: grid;
+  row-gap: 4px;
   justify-items: center;
 }
 
 .features__title {
   text-align: center;
+  letter-spacing: 0px;
+}
+
+.h2.features__title {
+  margin-bottom: 31px;
+}
+
+.features__list {
+  display: grid;
+  row-gap: 32px;
+  justify-items: center;
 }
 
 .features__item {
   display: grid;
+  row-gap: 7px;
   justify-items: center;
 }
 
-.features__description {
+.eco {
+  row-gap: 4px;
+}
+
+.feature__title {
+  @include font(1.8rem, 3.2rem, 700);
+}
+
+.feature__description {
   text-align: center;
   @include font(1.4rem, 2rem);
+}
+
+.feature:nth-child(2) .feature__description {
+  @include media('max', 'md') {
+    max-width: 80%;
+  }
+}
+
+.feature:nth-child(3) .feature__img {
+  padding-bottom: 6px;
+  width: 38px;
+}
+
+.feature:nth-child(4) .feature__img {
+  padding-bottom: 1px;
+  width: 46px;
 }

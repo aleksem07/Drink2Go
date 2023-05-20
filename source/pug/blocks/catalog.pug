@@ -3,7 +3,7 @@ include ../mixins/pagination
 
 section.catalog
   .wrapper
-    h4.h4.catalog__badge Каталог
+    h4.h4.catalog__badge.badge Каталог
     h2.h2.catalog__title Каталог кофейных напитков
     section.filter
       form.filter__form.form(action="#")
@@ -13,17 +13,18 @@ section.catalog
           .form__slider(id="form-slider")
           label.form__slider__min-label
             input.form__slider__min-input
-          label.slidform__sliderer__max-label
+          span.form__slider-delimiter &ndash;
+          label.form__slider__max-label
             input.form__slider__max-input
 
-        fieldset.form__section
+        fieldset.form__section.milk
           legend.filter__milk Наличие молока
           +input('radio', 'milk', "Неважно", true)
           +input('radio', 'milk', "Только животные")
-          +input('radio', 'milk', "Только растительные")
+          +input('radio', 'milk', "Только растительное")
           +input('radio', 'milk', "Без молока")(disabled)
 
-        fieldset.form__section
+        fieldset.form__section.country
           legend.filter__country Страна произрастания
           +input('checkbox', 'country', "Бразилия", true)
           +input('checkbox', 'country', "Эфиопия")
@@ -31,13 +32,14 @@ section.catalog
           +input('checkbox', 'country', "Коста-Рика")
           +input('checkbox', 'country', "Перу")(disabled)
 
-        +button("Применить")
-        +button("Сбросить")
+        +button("Применить")(class='button__apply')
+        +button("Сбросить")(class='button__reset')
 
     section.cards
-      legend.cards__sort Сортировка:
-      select.cards__sort-select
-        option.cards__sort-option По умолчанию
+      .cards__sort-wrapper
+        legend.cards__sort Сортировка:
+        select.cards__sort-select
+          option.cards__sort-option По умолчанию
 
       ul.cards__list
         +card('coffee_can1', 'Декаф Флэт Уайт', 'Кофе без кофеина из Эфиопии с натуральным фермерским молоком', '225₽')

@@ -2,10 +2,10 @@ mixin input(type, name, value, checked)
   if type === 'checkbox'
     .catalog-filter__box
       label.catalog-filter__label
-        input.catalog-filter__checkbox&attributes(attributes)(name=name checked=checked type=type)
-        span #{value}
+        input.catalog-filter__checkbox.visually-hidden&attributes(attributes)(name=name checked=checked type=type )
+        span.catalog-filter__title #{value}
   if type === 'radio'
     .catalog-filter__box.catalog-filter__box--radio
       label.catalog-filter__label
-        input.catalog-filter__radio&attributes(attributes)(name=name value=value id=name checked=checked type=type )
-        span #{value}
+        input.catalog-filter__radio.visually-hidden&attributes(attributes)(name=name value=value id=name checked=checked type=type )
+        span.catalog-filter__title #{value}

@@ -13,10 +13,10 @@ minValue.value = 0;
 noUiSlider.create(sliderElement, {
   start: [0, 123],
   connect: [false, true, false],
-  // step: 1,
+  step: 1,
   range: {
     min: [0],
-    max: [150],
+    max: [137],
   },
 });
 
