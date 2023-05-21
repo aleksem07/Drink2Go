@@ -1,6 +1,3 @@
-- var logo1x = "img/logo/logo.webp";
-- var logo2x = "img/logo/logo@2x.webp";
-
 -var logoTablet1x = "img/logo/logo_short.webp";
 -var logoTablet2x = "img/logo/logo_short@2x.webp";
 
@@ -16,7 +13,7 @@ a.header__logo.logo(href=pageClass === 'index-page' ? false : 'index.html')
       source(media='(min-width: 768px)' srcset=`
       ${logoTablet1x} 1x,
       ${logoTablet2x} 2x'`)
-      img(src=logo1x  srcset=`
-      ${logo1x} 1x,
-      ${logo2x} 2x'`
-      width='32px' height='36px' alt='Логотип компании')
+      img(src=logoTablet1x  srcset=`
+      ${logoTablet1x} 1x,
+      ${logoTablet2x} 2x'`
+      width='82px' height='36px' alt='Логотип компании')

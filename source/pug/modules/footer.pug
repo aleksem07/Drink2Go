@@ -6,14 +6,14 @@ footer.footer
   .footer__wrapper.footer__list
     .wrapper
       ul.footer__block-list.footer__social-list
-          include logo
+          include logo-footer
           +social('VK', 'VK')
           +social('Pinterest', 'Pinterest')
           +social('OK', 'OK')
 
     .footer__item
       .wrapper
-        h4.h4 Интернет-магазин
+        h4.h4.h4--footer Интернет-магазин
         ul.footer__block-list.footer__store-list.store-links
           +footer-store('Каталог', href=pageClass === 'catalog-page' ? false : '#')
           +footer-store('Доставка', href=pageClass === 'delivery-page' ? false : '#')
@@ -21,17 +21,21 @@ footer.footer
           +footer-store('О нас', href=pageClass === 'about-page' ? false : '#')
     .footer__item
       .wrapper
-        h4.h4 Медиа
+        h4.h4.h4--footer Медиа
         ul.footer__block-list.footer__media-list.media-links
           +footer-store('Блог', href=pageClass === 'catalog-page' ? false : '#')
           +footer-store('Информация для СМИ', href=pageClass === 'delivery-page' ? false : '#')
           +footer-store('Правовая информация', href=pageClass === 'pay-page' ? false : '#')
     .footer__item
       .wrapper
-        h4.h4 Контакты
+        h4.h4.h4--footer Контакты
         ul.footer__block-list.footer__contacts-list.contacts
-          li.contacts__adress Санкт-Петербург, набережная реки Карповки, дом 5
-          li.contacts__phone +7 (999) 999-99-99
+          li.contacts__info.contacts__adress
+            p Санкт-Петербург, набережная реки Карповки, дом 5
+          li.contacts__info.contacts__phone
+            a.contacts__phone-link(href='tel:+79999999999') +7 (999) 999-99-99
 
     .footer__copyright
-      span Разработано в HTML Academy
+      span.footer__copyright-text Разработано в&nbsp;
+      a.footer__copyright-text(href="https://htmlacademy.ru" target="_blank") HTML Academy
+        img.footer__copyright-text.footer__copyright-logo(src="img/icons/htmlacademy.webp" width='12' height='16' alt="Логотип htmlacademy.ru")

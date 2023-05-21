@@ -1,5 +1,6 @@
 .catalog {
   padding-top: 50px;
+  margin-bottom: 11px;
   padding-bottom: 44px;
   background: $color-base-grey--lightest;
 }
@@ -42,7 +43,7 @@
 }
 
 .cards__list {
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 }
 
 .card__item {
@@ -266,4 +267,50 @@ input:focus + .catalog-filter__title::before {
   background: $color-light;
   color: $color-base-primary;
   border: 1px solid $color-base-primary;
+}
+
+//pagination
+
+.pagination {
+  position: relative;
+}
+
+.pagination__item {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: $color-light;
+}
+
+.pagination__link {
+  color: $color-base-primary;
+}
+
+.pagination__link--active > .pagination__link {
+  color: $color-base-black;
+}
+
+.pagination__link--active {
+  background: transparent;
+  font-weight: 700;
+}
+
+.arrow {
+  position: relative;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #7859cf;
+  border-right: 2px solid #7859cf;
+  cursor: pointer;
+}
+
+.arrow-left {
+  transform: rotate(-135deg);
+}
+
+.arrow-right {
+  transform: rotate(45deg);
 }
