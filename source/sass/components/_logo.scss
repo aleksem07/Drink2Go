@@ -9,6 +9,10 @@
   @include media('max', 'md') {
     position: absolute;
   }
+
+  @include media('min', 'md') {
+    margin-right: auto;
+  }
 }
 
 .logo__img {
@@ -17,6 +21,15 @@
 
   @include media('max', 'md') {
     grid-row: span 2;
+  }
+
+  @include media('min', 'md') {
+    width: 82px;
+    height: 36px;
+  }
+
+  @include media('min', 'xl') {
+    width: 170px;
   }
 }
 

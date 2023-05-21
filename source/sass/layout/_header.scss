@@ -9,6 +9,10 @@
   padding-top: 12px;
   margin-inline: auto;
 
+  @include media('min', 'md') {
+    padding-block: 22px;
+  }
+
   & .wrapper {
     position: relative;
     display: flex;
@@ -16,6 +20,12 @@
 
     @include media('max', 'md') {
       display: block;
+    }
+
+    @include media('min', 'md') {
+      justify-content: start;
+      align-items: center;
+      column-gap: 9%;
     }
   }
 }

@@ -10,4 +10,8 @@
   max-width: $width-desktop;
   margin: 0 auto;
   margin-inline: $wrapper-inline;
+
+  @include media('min', 'md') {
+    margin-inline: 2.6%;
+  }
 }
