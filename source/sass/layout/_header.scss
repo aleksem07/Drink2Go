@@ -7,12 +7,16 @@
   align-items: center;
   background-color: transparent;
   padding-top: 12px;
-  padding-bottom: 8px;
   margin-inline: auto;
 
   & .wrapper {
+    position: relative;
     display: flex;
     justify-content: space-between;
+
+    @include media('max', 'md') {
+      display: block;
+    }
   }
 }
 

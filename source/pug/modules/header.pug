@@ -13,12 +13,12 @@ header.header
               <use class="menu-nav__icon-cross" href="img/sprite.svg#cross"></use>
           </svg>
 
-      ul.menu-nav__list.menu-site#menu-nav__list
+      ul.menu-nav__list.menu-site.menu__list--open
         +site-nav('Главная', href=pageClass === 'index-page' ? false : 'index.html')
         +site-nav('Каталог', href=pageClass === 'catalog-page' ? false : 'catalog.html')
         +site-nav('Доставка', href=pageClass === 'catalog-page' ? false : 'delivery.html')
         +site-nav('О нас', href=pageClass === 'catalog-page' ? false : 'about.html')
 
-      ul.menu-nav__list.menu-user#menu-nav__list
+      ul.menu-nav__list.menu-user
         +user-nav('Личный кабинет', 'navigation_user', '#')
         +user-nav('Корзтна', 'navigation_union', '#')

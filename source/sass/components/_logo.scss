@@ -1,11 +1,14 @@
 /* logo */
 
 .logo {
-  display: grid;
   column-gap: 8px;
-  grid-template-columns: min-content 1fr;
-
   transition: all 0.3s;
+}
+
+.header__logo {
+  @include media('max', 'md') {
+    position: absolute;
+  }
 }
 
 .logo__img {
