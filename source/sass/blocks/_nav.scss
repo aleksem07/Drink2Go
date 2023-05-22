@@ -43,6 +43,10 @@
     min-width: max-content;
     column-gap: 0;
   }
+
+  @include media('min', 'xl') {
+    column-gap: 19px;
+  }
 }
 
 .menu-site {
@@ -75,11 +79,21 @@
   @include media('min', 'md') {
     margin-left: 82px;
   }
+
+  @include media('min', 'xl') {
+    margin-left: 28%;
+  }
 }
 
 .menu-user__item {
   @include media('min', 'md') {
     margin-right: 42px;
+  }
+
+  &:last-child {
+    @include media('min', 'xl') {
+      margin-right: 0;
+    }
   }
 }
 
@@ -140,5 +154,16 @@
 
   @include media('min', 'md') {
     padding-bottom: 32px;
+    color: $color-base-primary;
+  }
+}
+
+.menu-user__link-title {
+  @include media('max', 'xl') {
+    display: none;
+  }
+  @include media('min', 'xl') {
+    margin-left: 3px;
+    @include font(1.2rem, 1.6rem, 500);
   }
 }

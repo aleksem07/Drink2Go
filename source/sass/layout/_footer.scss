@@ -24,6 +24,10 @@
   @include media('min', 'md') {
     height: 480px;
   }
+
+  @include media('min', 'xl') {
+    height: 540px;
+  }
 }
 
 .footer__info > .wrapper {
@@ -31,6 +35,12 @@
     display: flex;
     flex-wrap: wrap;
     column-gap: 11.5%;
+  }
+
+  @include media('min', 'xl') {
+    padding-top: 38px;
+    align-items: start;
+    column-gap: 3px;
   }
 }
 
@@ -75,11 +85,25 @@
     padding-bottom: 30px;
     width: 100%;
   }
+
+  @include media('min', 'xl') {
+    padding-top: 0;
+    max-width: 25.5%;
+    row-gap: 60px;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
 }
 
 .footer__social-list .social__item:not(:last-child) {
   @include media('min', 'md') {
     margin-right: 33px;
+  }
+}
+
+.footer__social-list .social__item:nth-child(2) {
+  @include media('min', 'xl') {
+    margin-left: 10px;
   }
 }
 
@@ -93,11 +117,19 @@
   @include media('min', 'md') {
     padding-left: 15px;
   }
+
+  @include media('min', 'xl') {
+    padding-left: 25px;
+  }
 }
 
 .contacts {
   padding-bottom: 9px;
   position: relative;
+
+  @include media('min', 'xl') {
+    padding-top: 7px;
+  }
 }
 
 .contacts__info {
@@ -138,6 +170,10 @@
     padding-top: 15px;
     width: 100%;
   }
+
+  @include media('min', 'xl') {
+    padding-top: 4px;
+  }
 }
 
 .footer__copyright-text {
@@ -152,6 +188,10 @@
 .footer__list .logo__img {
   height: 36px;
   min-width: 82px;
+
+  @include media('min', 'xl') {
+    margin-bottom: 10px;
+  }
 }
 
 .footer__list svg {
@@ -162,5 +202,16 @@
 .footer__item {
   @include media('min', 'md') {
     max-width: 30%;
+  }
+
+  @include media('min', 'xl') {
+    padding-top: 8px;
+    max-width: 21%;
+  }
+}
+
+.footer__item:not(:nth-child(4)) {
+  @include media('min', 'xl') {
+    margin-right: 170px;
   }
 }

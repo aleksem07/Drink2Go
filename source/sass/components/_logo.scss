@@ -13,11 +13,22 @@
   @include media('min', 'md') {
     margin-right: auto;
   }
+
+  @include media('min', 'xl') {
+    margin-right: 3%;
+    display: flex;
+    align-items: center;
+    column-gap: 23px;
+  }
 }
 
 .footer__logo {
   @include media('min', 'md') {
     margin-right: auto;
+  }
+
+  @include media('min', 'xl') {
+    width: 100%;
   }
 }
 
@@ -46,25 +57,18 @@
   }
 }
 
-@include media('max', 'md') {
-  .logo__title,
-  .logo__tagline {
+.logo__text {
+  @include media('max', 'xl') {
     display: none;
+  }
+
+  @include media('min', 'xl') {
+    @include font(1.2rem, 1.6rem, 400);
   }
 }
 
-.logo__title {
-  margin: 0;
-
-  @include media('min', 'md') {
-    align-self: center;
-  }
-}
-
-.logo__tagline {
-  margin: 0;
-
-  @include media('min', 'md') {
-    display: none;
+.footer__logo .logo__text {
+  @include media('min', 'xl') {
+    @include font(1.4rem, 2rem);
   }
 }

@@ -13,10 +13,3 @@ mixin pagination(number, href= "#", active, arrowLeft, arrowRight)
   else
     li.pagination__item
       a.pagination__link(href= href title=`'Перейти на страницу № ${number}'`)= number
-
-//- ul.pagination__list
-    +pagination('1', '#', true)
-    +pagination('2')
-    +pagination('3')
-    +pagination('4')
-    +pagination('', '#')

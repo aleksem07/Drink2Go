@@ -5,6 +5,10 @@
   @include media('min', 'md') {
     padding-bottom: 96px;
   }
+
+  @include media('min', 'xl') {
+    padding-bottom: 114px;
+  }
 }
 
 .features .wrapper {
@@ -24,6 +28,10 @@
   @include media('min', 'md') {
     margin-bottom: 58px;
   }
+
+  @include media('min', 'xl') {
+    margin-bottom: 75px;
+  }
 }
 
 .features__list {
@@ -34,6 +42,11 @@
   @include media('min', 'md') {
     grid-template-columns: 1fr 1fr;
     row-gap: 48px;
+  }
+
+  @include media('min', 'xl') {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -54,10 +67,24 @@
       width: 44px;
     }
   }
+
+  @include media('min', 'xl') {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 25%;
+    gap: 13px;
+  }
 }
 
 .eco {
   row-gap: 4px;
+
+  @include media('min', 'xl') {
+    flex: 1;
+    row-gap: 13px;
+  }
 }
 
 .feature__img {
@@ -76,6 +103,10 @@
     grid-row: 1 / 2;
     @include font(2.4rem, 3.6rem, 700);
   }
+
+  @include media('min', 'xl') {
+    padding-top: 9px;
+  }
 }
 
 .feature__description {
@@ -88,6 +119,11 @@
     grid-row: 1 / 3;
     text-align: start;
     @include font(1.6rem, 2.4rem);
+  }
+
+  @include media('min', 'xl') {
+    margin-top: 0;
+    text-align: center;
   }
 }
 
