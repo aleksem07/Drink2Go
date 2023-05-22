@@ -94,10 +94,10 @@
                   <h3 class="h3 feature__title">Бодрость</h3>
                   <p class="feature__description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
                 </li>
-                <li class="features__item feature eco"><img class="feature__img" src="img/features/icon_eco.webp" width="52" height="56" alt="">
-                  <h3 class="h3 feature__title">Экологичность</h3>
-                  <p class="feature__description">Вся упаковка сделана</p><span class="feature__description">из перерабатываемых материалов</span>
-                </li>
+            <li class="features__item feature eco"><img class="feature__img" src="img/features/icon_eco.webp" width="52" height="56" alt="">
+              <h3 class="h3 feature__title">Экологичность</h3>
+              <p class="feature__description">Вся упаковка сделана <br> из перерабатываемых материалов</p>
+            </li>
           </ul>
         </div>
       </section>
@@ -107,7 +107,7 @@
           <h2 class="h2 catalog__title">Каталог кофейных напитков</h2>
           <section class="filter">
             <form class="filter__form form" action="#">
-              <fieldset class="form__section">
+              <fieldset class="form__section form-slider">
                 <legend class="filter__price">Цена</legend>
                 <div class="form__slider" id="form-slider"></div>
                 <label class="form__slider__min-label">
@@ -218,11 +218,13 @@
                   </li>
             </ul>
             <ul class="pagination">
-                    <li class="pagination__item"><a class="pagination__link pagination__link--arrow arrow arrow-left" href="#" title="Перейти на предыдущую страницу"><span class="visually-hidden">Перейти на предыдущую страницу</span></a></li>
+              <li class="pagination__item back"><a class="pagination__link pagination__link--arrow" href="#" title="Перейти на предыдущую страницу">Назад</a><span class="visually-hidden">Перейти на предыдущую страницу</span></li>
+                    <li class="pagination__item arrow-mobile"><a class="pagination__link pagination__link--arrow arrow arrow-left" href="#" title="Перейти на предыдущую страницу"><span class="visually-hidden">Перейти на предыдущую страницу</span></a></li>
                     <li class="pagination__item"><a class="pagination__link" href="#" title="'Перейти на страницу № 1'">1</a></li>
                     <li class="pagination__item pagination__link--active"><a class="pagination__link" title="'Текущая страница № 2'">2</a></li>
                     <li class="pagination__item"><a class="pagination__link" href="#" title="'Перейти на страницу № 3'">3</a></li>
-                    <li class="pagination__item"><a class="pagination__link pagination__link--arrow arrow arrow-right" href="#" title="Перейти на следующую страницу"><span class="visually-hidden">Перейти на следующую страницу</span></a></li>
+                    <li class="pagination__item arrow-mobile"><a class="pagination__link pagination__link--arrow arrow arrow-right" href="#" title="Перейти на следующую страницу"><span class="visually-hidden">Перейти на следующую страницу</span></a></li>
+              <li class="pagination__item next"><a class="pagination__link pagination__link--arrow" href="#" title="Перейти на предыдущую страницу">Вперёд</a><span class="visually-hidden">Перейти на следующую страницу</span></li>
             </ul>
           </section>
         </div>
@@ -230,17 +232,17 @@
     </main>
     <footer class="footer">
       <div class="footer__map-leaflet" id="map-leaflet"></div>
-      <div class="footer__wrapper footer__list">
+      <div class="footer__info footer__list">
         <div class="wrapper">
           <ul class="footer__block-list footer__social-list"><a class="footer__logo logo">
               <div class="logo__img">
                 <picture>
                   <source media="(min-width: 1440px)" srcset="
       img/logo/logo_full.webp 1x,
-      img/logo/logo_full@2x.webp 2x'">
+      img/logo/logo_full@2x.webp 2x'" width="170px" height="36px" alt="Логотип компании">
                   <source media="(min-width: 768px)" srcset="
-      img/logo/logo_short.webp 1x,
-      img/logo/logo_short@2x.webp 2x'"><img src="img/logo/logo_short.webp" srcset="
+      img/logo/logo_full.webp 1x,
+      img/logo/logo_full@2x.webp 2x'" width="170px" height="36px" alt="Логотип компании"><img src="img/logo/logo_short.webp" srcset="
       img/logo/logo_short.webp 1x,
       img/logo/logo_short@2x.webp 2x'" width="82px" height="36px" alt="Логотип компании">
                 </picture>
@@ -261,9 +263,7 @@
                   </svg>
                 </li>
           </ul>
-        </div>
-        <div class="footer__item">
-          <div class="wrapper">
+          <div class="footer__item">
             <h4 class="h4 h4--footer">Интернет-магазин</h4>
             <ul class="footer__block-list footer__store-list store-links">
                   <li class="footer__link-item link-item"><a class="link-item__title" href="#" rel="noopener noreferrer">Каталог</a>
@@ -276,9 +276,7 @@
                   </li>
             </ul>
           </div>
-        </div>
-        <div class="footer__item">
-          <div class="wrapper">
+          <div class="footer__item media">
             <h4 class="h4 h4--footer">Медиа</h4>
             <ul class="footer__block-list footer__media-list media-links">
                   <li class="footer__link-item link-item"><a class="link-item__title" href="#" rel="noopener noreferrer">Блог</a>
@@ -289,17 +287,15 @@
                   </li>
             </ul>
           </div>
-        </div>
-        <div class="footer__item">
-          <div class="wrapper">
+          <div class="footer__item">
             <h4 class="h4 h4--footer">Контакты</h4>
             <ul class="footer__block-list footer__contacts-list contacts">
               <li class="contacts__info contacts__adress"><a class="contacts__address-link" href="https://yandex.ru/maps/2/saint-petersburg/house/naberezhnaya_reki_karpovki_5/Z0kYdQZmS0IFQFtjfXV3eX1gYw==/?ll=30.316272%2C59.968137&amp;z=15" target="_blank">Санкт-Петербург, набережная реки Карповки, дом 5</a></li>
               <li class="contacts__info contacts__phone"><a class="contacts__phone-link" href="tel:+79999999999">+7 (999) 999-99-99</a></li>
             </ul>
           </div>
+          <div class="footer__copyright"><span class="footer__copyright-text">Разработано в&nbsp;</span><a class="footer__copyright-text" href="https://htmlacademy.ru" target="_blank">HTML Academy<img class="footer__copyright-text footer__copyright-logo" src="img/icons/htmlacademy.webp" width="12" height="16" alt="Логотип htmlacademy.ru"></a></div>
         </div>
-        <div class="footer__copyright"><span class="footer__copyright-text">Разработано в&nbsp;</span><a class="footer__copyright-text" href="https://htmlacademy.ru" target="_blank">HTML Academy<img class="footer__copyright-text footer__copyright-logo" src="img/icons/htmlacademy.webp" width="12" height="16" alt="Логотип htmlacademy.ru"></a></div>
       </div>
     </footer>
     <script src="js/main.js" type="module"></script>

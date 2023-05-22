@@ -1,10 +1,10 @@
 mixin pagination(number, href= "#", active, arrowLeft, arrowRight)
   if arrowLeft
-    li.pagination__item
+    li.pagination__item.arrow-mobile
       a.pagination__link.pagination__link--arrow.arrow.arrow-left(href='#' title='Перейти на предыдущую страницу')
         span.visually-hidden Перейти на предыдущую страницу
   else if arrowRight
-    li.pagination__item
+    li.pagination__item.arrow-mobile
       a.pagination__link.pagination__link--arrow.arrow.arrow-right(href='#' title='Перейти на следующую страницу')
         span.visually-hidden Перейти на следующую страницу
   else if active

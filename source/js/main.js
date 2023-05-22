@@ -11,12 +11,12 @@ const maxValue = document.querySelector('.form__slider__max-input');
 minValue.value = 0;
 
 noUiSlider.create(sliderElement, {
-  start: [0, 123],
+  start: [0, 900],
   connect: [false, true, false],
   step: 1,
   range: {
     min: [0],
-    max: [137],
+    max: [1000],
   },
 });
 
