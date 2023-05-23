@@ -1,12 +1,13 @@
 import './menuToggle.js';
+import './select.js';
 
 // window.onload = () => {
 
 // }
 
 const sliderElement = document.querySelector('.form__slider');
-const minValue = document.querySelector('.form__slider__min-input');
-const maxValue = document.querySelector('.form__slider__max-input');
+const minValue = document.querySelector('.form__slider-min-input');
+const maxValue = document.querySelector('.form__slider-max-input');
 
 minValue.value = 0;
 
@@ -22,6 +23,4 @@ noUiSlider.create(sliderElement, {
 
 sliderElement.noUiSlider.on('update', (_, handle, unencoded) => {
   maxValue.value = unencoded[handle];
-  console.log(handle);
-  console.log(unencoded);
 });

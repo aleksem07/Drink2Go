@@ -11,11 +11,11 @@ section.catalog
         fieldset.form__section.form-slider
           legend.filter__price Цена
           .form__slider(id="form-slider")
-          label.form__slider__min-label
-            input.form__slider__min-input
+          label.form__slider-min-label
+            input.form__slider-min-input(placeholder="0")
           span.form__slider-delimiter &ndash;
-          label.form__slider__max-label
-            input.form__slider__max-input
+          label.form__slider-max-label
+            input.form__slider-max-input
 
         fieldset.form__section.milk
           legend.filter__milk Наличие молока
@@ -37,9 +37,21 @@ section.catalog
 
     section.cards
       .cards__sort-wrapper
-        legend.cards__sort Сортировка:
-        select.cards__sort-select
-          option.cards__sort-option По умолчанию
+        form.cards__select-wrapper.select
+          p.select__h Сортировка:
+          .select__wrapper(data-state="")
+            .select__title(data-default="Option 0") по умолчанию
+            .select__content
+              label.select__label(for="singleSelect0") по умолчанию
+              input.select__input(id="singleSelect1" type="radio" name="singleSelect" checked)
+              label.select__label(for="singleSelect1") по умолчанию
+              input.select__input(id="singleSelect2" type="radio" name="singleSelect")
+              label.select__label(for="singleSelect2") сначала дорогие
+              input.select__input(id="singleSelect3" type="radio" name="singleSelect" )
+              label.select__label(for="singleSelect3") сначала дешёвые
+              input.select__input(id="singleSelect4" type="radio" name="singleSelect" )
+              label.select__label(for="singleSelect4") высокий рейтинг
+
 
       ul.cards__list
         +card('coffee_can1', 'Декаф Флэт Уайт', 'Кофе без кофеина из Эфиопии с натуральным фермерским молоком', '225₽')

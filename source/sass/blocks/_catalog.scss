@@ -4,6 +4,10 @@
   padding-bottom: 44px;
   background: $color-base-grey--lightest;
 
+  @include media('max', 'md') {
+    padding-top: 53px;
+  }
+
   @include media('min', 'md') {
     margin-bottom: 0;
     padding-top: 81px;
@@ -63,31 +67,19 @@
 
 .cards__sort-wrapper {
   padding-bottom: 20px;
-  display: flex;
   justify-content: start;
   align-items: baseline;
   column-gap: 6%;
   font-weight: 600;
 
   @include media('min', 'md') {
-    padding-bottom: 42px;
+    padding-bottom: 17px;
     column-gap: 2%;
     justify-content: end;
   }
 
   @include media('min', 'xl') {
-    padding-bottom: 33px;
-  }
-}
-
-.cards__sort-select {
-  border: none;
-  background: transparent;
-  text-transform: lowercase;
-  color: $color-base-primary;
-
-  @include media('min', 'md') {
-    margin-right: 15px;
+    padding-bottom: 14px;
   }
 }
 
@@ -124,7 +116,21 @@
   align-items: center;
   background: $color-light;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
 
+.card__item {
+  @media (width >= 768px) and (width < 1440px) {
+    margin-bottom: 10px;
+    padding-top: 50px;
+  }
+
+  @include media('max', 'md') {
+    margin-bottom: 26px;
+    padding-top: 32px;
+  }
+}
+
+.card__item {
   @include media('min', 'md') {
     padding-inline: 27px;
     row-gap: 11px;
@@ -204,6 +210,10 @@
 .form {
   padding-bottom: 24px;
 
+  @include media('max', 'md') {
+    padding-bottom: 14px;
+  }
+
   @include media('min', 'md') {
     display: grid;
     column-gap: 16px;
@@ -236,15 +246,15 @@
   }
 }
 
-.form__slider__min-label,
-.form__slider__max-label {
+.form__slider-min-label,
+.form__slider-max-label {
   outline: 2px solid $color-base-primary--lighter;
   outline-offset: -1px;
   border-radius: 4px;
 }
 
-.form__slider__min-input,
-.form__slider__max-input {
+.form__slider-min-input,
+.form__slider-max-input {
   padding: 7px;
   max-width: 43%;
   display: inline;
@@ -257,6 +267,23 @@
   @include media('min', 'xl') {
     max-width: 39%;
   }
+
+  &::placeholder {
+    color: $color-base-grey;
+  }
+}
+
+.form__slider-min-label:has(.form__slider-min-input:focus),
+.form__slider-max-label:has(.form__slider-max-input:focus) {
+  outline: 2px solid $color-base-primary--darker;
+  outline-offset: -1px;
+}
+
+.form__slider-min-label:has(.form__slider-min-input:disabled),
+.form__slider-max-label:has(.form__slider-max-input:disabled) {
+  outline: 2px solid $color-base-grey;
+  outline-offset: -1px;
+  color: $color-base-grey;
 }
 
 .form__slider-delimiter {

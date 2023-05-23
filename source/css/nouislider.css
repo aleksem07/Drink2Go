@@ -76,7 +76,25 @@
 .noUi-touch-area {
   height: 100%;
   width: 100%;
+  cursor: pointer;
 }
+
+.noUi-handle:focus,
+.noUi-touch-area:hover,
+.noUi-touch-area:focus,
+.noUi-touch-area:active {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  margin: auto;
+  transform: translate(0, 15%);
+  background: rgba(120, 89, 207, 0.25);
+}
+
+.noUi-touch-area:active {
+  background: #7859CF;
+}
+
 .noUi-state-tap .noUi-connect,
 .noUi-state-tap .noUi-origin {
   -webkit-transition: transform 0.3s;

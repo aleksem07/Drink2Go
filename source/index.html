@@ -121,11 +121,11 @@
               <fieldset class="form__section form-slider">
                 <legend class="filter__price">Цена</legend>
                 <div class="form__slider" id="form-slider"></div>
-                <label class="form__slider__min-label">
-                  <input class="form__slider__min-input">
+                <label class="form__slider-min-label">
+                  <input class="form__slider-min-input" placeholder="0">
                 </label><span class="form__slider-delimiter">&ndash;</span>
-                <label class="form__slider__max-label">
-                  <input class="form__slider__max-input">
+                <label class="form__slider-max-label">
+                  <input class="form__slider-max-input">
                 </label>
               </fieldset>
               <fieldset class="form__section milk">
@@ -185,10 +185,23 @@
           </section>
           <section class="cards">
             <div class="cards__sort-wrapper">
-              <legend class="cards__sort">Сортировка:</legend>
-              <select class="cards__sort-select">
-                <option class="cards__sort-option">По умолчанию</option>
-              </select>
+              <form class="cards__select-wrapper select">
+                <p class="select__h">Сортировка:</p>
+                <div class="select__wrapper" data-state="">
+                  <div class="select__title" data-default="Option 0">по умолчанию</div>
+                  <div class="select__content">
+                    <label class="select__label" for="singleSelect0">по умолчанию</label>
+                    <input class="select__input" id="singleSelect1" type="radio" name="singleSelect" checked>
+                    <label class="select__label" for="singleSelect1">по умолчанию</label>
+                    <input class="select__input" id="singleSelect2" type="radio" name="singleSelect">
+                    <label class="select__label" for="singleSelect2">сначала дорогие</label>
+                    <input class="select__input" id="singleSelect3" type="radio" name="singleSelect">
+                    <label class="select__label" for="singleSelect3">сначала дешёвые</label>
+                    <input class="select__input" id="singleSelect4" type="radio" name="singleSelect">
+                    <label class="select__label" for="singleSelect4">высокий рейтинг</label>
+                  </div>
+                </div>
+              </form>
             </div>
             <ul class="cards__list">
                   <li class="card__item card"><img class="card__image" src="img/catalog/coffee_can1.webp" width="130" height="188" alt="Баночка кофе">
