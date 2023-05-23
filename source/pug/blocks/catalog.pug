@@ -53,7 +53,7 @@ section.catalog
         li.pagination__item.back
           a.pagination__link.pagination__link--arrow(href="#" title="Перейти на предыдущую страницу") Назад
           span.visually-hidden Перейти на предыдущую страницу
-        +pagination('Назад', '#', false, true)
+        +pagination('Назад', '#', false, true)(disabled)
         +pagination('1', '#')
         +pagination('2', '#', true)
         +pagination('3', '#')

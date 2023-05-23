@@ -9,6 +9,10 @@
   padding-top: 12px;
   margin-inline: auto;
 
+  @include media('max', 'md') {
+    padding-top: 21px;
+  }
+
   @include media('min', 'md') {
     padding-block: 22px;
   }

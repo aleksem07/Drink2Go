@@ -1,6 +1,7 @@
 section.slider
   .wrapper
-    .slider__arrow-left
+    button.wrapper__img
+      img.slider__arrow-left(src="img/icons/arrow_left.webp")
     .slider__content
       img.slider__image(src="img/slider/flat_white.webp")
       h4.h4.slider__badge.badge Новинка!
@@ -10,4 +11,12 @@ section.slider
         s.buy__old-price 295₽
         p.buy__new-price.actual-price 225₽
         +button("Заказать")
-    .slider__arrow-right
+    button.wrapper__img
+      img.slider__arrow-right(src="img/icons/arrow_right.webp")
+    ul.slider__pagination
+      li.slider__pafination-item
+        button.slider__pagination-button.active
+      li.slider__pafination-item
+        button.slider__pagination-button
+      li.slider__pafination-item
+        button.slider__pagination-button

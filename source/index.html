@@ -63,7 +63,7 @@
     <main class="index-page">
       <section class="slider">
         <div class="wrapper">
-          <div class="slider__arrow-left"></div>
+          <button class="wrapper__img"><img class="slider__arrow-left" src="img/icons/arrow_left.webp"></button>
           <div class="slider__content"><img class="slider__image" src="img/slider/flat_white.webp">
             <h4 class="h4 slider__badge badge">Новинка!</h4>
             <h2 class="h2 slider__title">Декаф Флэт Уайт</h2>
@@ -74,7 +74,18 @@
                   <button class="button" type="button"><span class="button__text">Заказать</span></button>
             </div>
           </div>
-          <div class="slider__arrow-right"></div>
+          <button class="wrapper__img"><img class="slider__arrow-right" src="img/icons/arrow_right.webp"></button>
+          <ul class="slider__pagination">
+            <li class="slider__pafination-item">
+              <button class="slider__pagination-button active"></button>
+            </li>
+            <li class="slider__pafination-item">
+              <button class="slider__pagination-button"></button>
+            </li>
+            <li class="slider__pafination-item">
+              <button class="slider__pagination-button"></button>
+            </li>
+          </ul>
         </div>
       </section>
       <section class="features">
@@ -294,7 +305,10 @@
               <li class="contacts__info contacts__phone"><a class="contacts__phone-link" href="tel:+79999999999">+7 (999) 999-99-99</a></li>
             </ul>
           </div>
-          <div class="footer__copyright"><span class="footer__copyright-text">Разработано в&nbsp;</span><a class="footer__copyright-text" href="https://htmlacademy.ru" target="_blank">HTML Academy<img class="footer__copyright-text footer__copyright-logo" src="img/icons/htmlacademy.webp" width="12" height="16" alt="Логотип htmlacademy.ru"></a></div>
+          <div class="footer__copyright"><span class="footer__copyright-text">Разработано в&nbsp;</span><a class="footer__copyright-text" href="https://htmlacademy.ru" target="_blank">HTML Academy
+              <h2 class="visually-hidden">Логотип htmlacademy</h2><svg width="16" height="16" viewBox="0 0 16 16">
+<use xlink:href="img/sprite.svg#htmlacademy"></use>
+</svg></a></div>
         </div>
       </div>
     </footer>
