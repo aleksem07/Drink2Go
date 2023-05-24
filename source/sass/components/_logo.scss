@@ -8,6 +8,8 @@
 .header__logo {
   @include media('max', 'md') {
     position: absolute;
+    top: 10px;
+    left: 10px;
   }
 
   @include media('min', 'md') {

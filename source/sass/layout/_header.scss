@@ -6,18 +6,14 @@
   max-width: $width-desktop;
   align-items: center;
   background-color: transparent;
-  padding-top: 12px;
-  margin-inline: auto;
-
-  @include media('max', 'md') {
-    padding-top: 21px;
-  }
+  margin: 0 auto;
 
   @include media('min', 'md') {
     padding-block: 22px;
   }
 
   & .wrapper {
+    margin-inline: 2.9%;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -37,6 +33,10 @@
 .menu-nav__button svg {
   height: 22px;
   width: 22px;
+}
+
+.menu-nav__button:active {
+  background: $color-base-secondary;
 }
 
 .header__phone {

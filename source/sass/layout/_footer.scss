@@ -71,6 +71,15 @@
 .link-item__title {
   text-transform: uppercase;
   @include font(1.2rem, 1.6rem, 500);
+
+  &:hover,
+  &:focus {
+    color: $color-base-primary--lighter;
+  }
+
+  &:active {
+    color: $color-base-primary--darker;
+  }
 }
 
 .footer__social-list {
@@ -149,6 +158,18 @@
 
 .contacts__adress {
   margin-bottom: 18px;
+}
+
+.contacts__address-link,
+.contacts__phone-link {
+  &:hover,
+  &:focus {
+    color: $color-base-primary--lighter;
+  }
+
+  &:active {
+    color: $color-base-primary--darker;
+  }
 }
 
 .contacts__adress::before,
