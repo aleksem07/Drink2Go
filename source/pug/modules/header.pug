@@ -15,9 +15,9 @@ header.header
 
       ul.menu-nav__list.menu-site.menu__list--open
         +site-nav('Главная', href=pageClass === 'index-page' ? false : 'index.html')
-        +site-nav('Каталог', href=pageClass === 'catalog-page' ? false : 'catalog.html')
-        +site-nav('Доставка', href=pageClass === 'catalog-page' ? false : 'delivery.html')
-        +site-nav('О нас', href=pageClass === 'catalog-page' ? false : 'about.html')
+        +site-nav('Каталог', href=pageClass === 'catalog-page' ? false : '#')
+        +site-nav('Доставка', href=pageClass === 'catalog-page' ? false : '#')
+        +site-nav('О нас', href=pageClass === 'catalog-page' ? false : '#')
 
       ul.menu-nav__list.menu-user
         +user-nav('Войти', 'navigation_user', '#')

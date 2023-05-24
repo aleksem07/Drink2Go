@@ -57,7 +57,6 @@
 .menu-site.menu__list--open {
   @include media('max', 'md') {
     display: grid;
-    row-gap: 10px;
     justify-content: center;
   }
 }
@@ -66,7 +65,7 @@
   transition: all 10s;
   position: relative;
   order: 3;
-  display: block;
+  display: flex;
 
   @include media('max', 'md') {
     grid-column: 1 / -1;
@@ -76,6 +75,7 @@
 
 .menu-user {
   @include media('min', 'md') {
+    order: 4;
     margin-left: 57px;
   }
 
@@ -142,17 +142,27 @@
     width: 100vw;
     @include font(1.2rem, 1.6rem, 500);
   }
-
-  &:last-child {
-    @include media('max', 'md') {
-      margin-bottom: -13px;
-    }
-  }
 }
 
 .menu-site__link {
   @include media('min', 'md') {
+    padding: 32px;
     padding-inline: 21px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-base-primary;
+  }
+
+  &:active {
+    background: $color-base-secondary;
+  }
+}
+
+.menu-site__item:has(.menu-site__link:active) {
+  @include media('max', 'md') {
+    background: $color-base-secondary;
   }
 }
 

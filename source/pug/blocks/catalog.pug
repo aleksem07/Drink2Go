@@ -63,14 +63,14 @@ section.catalog
 
       ul.pagination
         li.pagination__item.back
-          a.pagination__link.pagination__link--arrow(href="#" title="Перейти на предыдущую страницу") Назад
+          a.pagination__link.pagination__link--arrow.back(href="#" title="Перейти на предыдущую страницу") Назад
           span.visually-hidden Перейти на предыдущую страницу
         +pagination('Назад', '#', false, true)(disabled)
-        +pagination('1', '#')
-        +pagination('2', '#', true)
-        +pagination('3', '#')
+        +pagination('1', '#')(class="pagination__page")
+        +pagination('2', '#', true)(class="pagination__page")
+        +pagination('3', '#')(class="pagination__page")
         +pagination('Вперед', '#', false, false, true)
         li.pagination__item.next
-          a.pagination__link.pagination__link--arrow(href="#" title="Перейти на предыдущую страницу") Вперёд
+          a.pagination__link.pagination__link--arrow.next(href="#" title="Перейти на предыдущую страницу") Вперёд
           span.visually-hidden Перейти на следующую страницу
 

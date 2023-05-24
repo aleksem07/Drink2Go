@@ -1,15 +1,15 @@
 mixin pagination(number, href= "#", active, arrowLeft, arrowRight)
   if arrowLeft
-    li.pagination__item.arrow-mobile
-      a.pagination__link.pagination__link--arrow.arrow.arrow-left(href='#' title='Перейти на предыдущую страницу')
+    li.pagination__item.arrow-mobile.arrow-mobile__back
+      a.pagination__link.pagination__link--arrow.arrow.arrow-left.arrow-mobile__back(href='#' title='Перейти на предыдущую страницу')
         span.visually-hidden Перейти на предыдущую страницу
   else if arrowRight
-    li.pagination__item.arrow-mobile
-      a.pagination__link.pagination__link--arrow.arrow.arrow-right(href='#' title='Перейти на следующую страницу')
+    li.pagination__item.arrow-mobile.arrow-mobile__next
+      a.pagination__link.pagination__link--arrow.arrow.arrow-right.arrow-mobile__next(href='#' title='Перейти на следующую страницу')
         span.visually-hidden Перейти на следующую страницу
   else if active
-    li.pagination__item.pagination__link--active
+    li.pagination__item.pagination__link--active&attributes(attributes)
       a.pagination__link(title=`'Текущая страница № ${number}'`)= number
   else
-    li.pagination__item
+    li.pagination__item&attributes(attributes)
       a.pagination__link(href= href title=`'Перейти на страницу № ${number}'`)= number

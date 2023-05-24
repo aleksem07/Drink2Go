@@ -1,5 +1,6 @@
 import './menuToggle.js';
 import './select.js';
+import './card-pagination.js';
 
 // window.onload = () => {
 
