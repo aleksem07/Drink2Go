@@ -1,61 +1,47 @@
 {
-  "name": "Drink2Go",
+  "name": "aleksem07@gmail.com",
+  "version": "1.0.0",
   "private": true,
   "homepage": "https://github.com/aleksem07/Drink2Go",
   "description": "Грейдирование htmlacademy: Drink2Go",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
-    "autoprefixer": "10.2.5",
-    "browser-sync": "2.26.14",
-    "del": "^6.0.0",
-    "eslint": "7.18.0",
-    "eslint-config-htmlacademy": "2.0.0",
+    "autoprefixer": "10.4.13",
+    "browser-sync": "2.27.10",
+    "del": "7.0.0",
     "gh-pages": "^4.0.0",
-    "gulp": "^4.0.2",
-    "gulp-cssmin": "^0.2.0",
-    "gulp-csso": "^4.0.1",
-    "gulp-file-include": "^2.3.0",
-    "gulp-gh-pages": "^0.5.4",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "7.1.0",
-    "gulp-jsmin": "^0.1.5",
+    "gulp": "4.0.2",
+    "gulp-html-bemlinter": "2.1.2",
+    "gulp-if": "3.0.0",
+    "gulp-libsquoosh": "1.1.2",
     "gulp-plumber": "1.2.1",
-    "gulp-postcss": "9.0.0",
-    "gulp-rigger": "^0.5.8",
-    "gulp-sass": "^5.1.0",
-    "gulp-sourcemaps": "3.0.0",
-    "gulp-svgstore": "^9.0.0",
-    "gulp-webp": "^4.0.1",
-        "gulp-terser": "2.1.0",
-        "gulp-w3c-html-validator": "5.1.3",
-        "gulp-html-bemlinter": "2.1.2",
-    "imagemin": "^8.0.1",
-    "postcss": "^8.4.19",
-    "postcss-less": "^6.0.0",
-        "postcss-url": "10.1.3",
-    "prettier": "^2.8.7",
-    "sass": "^1.53.0",
-    "stylelint": "^13.3.3",
-    "stylelint-config-idiomatic-order": "^8.1.0",
-    "stylelint-config-prettier": "^8.0.1",
-    "stylelint-order": "^4.0.0",
-    "stylelint-prettier": "^1.1.2",
-    "stylelint-scss": "^3.17.1",
-        "stylelint-config-htmlacademy": "1.1.2"
+    "gulp-postcss": "9.0.1",
+    "gulp-sass": "5.1.0",
+    "gulp-stacksvg": "1.0.6",
+    "gulp-svgmin": "4.1.0",
+    "gulp-terser": "2.1.0",
+    "gulp-w3c-html-validator": "5.1.3",
+    "postcss": "8.4.19",
+    "postcss-csso": "6.0.1",
+    "postcss-scss": "4.0.5",
+    "postcss-url": "10.1.3",
+    "pug": "^3.0.2",
+    "pug-cli": "1.0.0-alpha6",
+    "sass": "1.56.1",
+    "stylelint": "14.15.0",
+    "stylelint-config-htmlacademy": "1.1.2"
   },
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/sass/**/*.scss\"",
-    "stylelint:fix": "stylelint '**/*{.css,.scss}' --fix",
-        "w3c": "gulp validateMarkup --silent",
-        "bemlinter": "gulp lintBem --silent",
-        "lint": "npm run editorconfig && npm run stylelint && npm run w3c && npm run bemlinter",
-        "preview": "gulp buildProd && gulp startServer",
-    "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp build",
-    "start": "gulp",
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --custom-syntax postcss-scss",
+    "w3c": "gulp validateMarkup --silent",
+    "bemlinter": "gulp lintBem --silent",
+    "lint": "npm run editorconfig && npm run stylelint && npm run w3c && npm run bemlinter",
+    "start": "gulp runDev",
+    "build": "gulp buildProd",
+    "preview": "gulp buildProd && gulp startServer",
     "pug": "pug ./source/pug/*.pug --pretty -w -o ./source"
   },
   "browserslist": [
@@ -75,19 +61,8 @@
   "engines": {
     "node": ">=16.13.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-},
-"lint-staged": {
-  "*.(css|scss)": [
-    "stylelint --fix"
-  ]
-},
+  "type": "module",
   "dependencies": {
-    "postcss-scss": "^4.0.6",
-    "pug": "^3.0.2",
-    "pug-cli": "1.0.0-alpha6"
+    "rename": "^1.0.4"
   }
 }

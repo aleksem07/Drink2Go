@@ -1,21 +1,21 @@
-@use './variables' as *;
+@use "./variables" as *;
 $sizes: (
-  'xs': $width-mobile-small,
-  'sm': $width-mobile-big,
-  'md': $width-tablet,
-  'lg': 992px,
-  'xl': $width-desktop,
+  "xs": $width-mobile-small,
+  "sm": $width-mobile-big,
+  "md": $width-tablet,
+  "lg": 992px,
+  "xl": $width-desktop,
 );
 
 @mixin media($minmax, $media) {
   @each $size, $resolution in $sizes {
-    @if $media == $size and $minmax == 'min' {
-      @media only screen and (width >= $resolution) {
+    @if $media == $size and $minmax == "min" {
+      @media only screen and (min-width: $resolution) {
         @content;
       }
     }
-    @if $media == $size and $minmax == 'max' {
-      @media only screen and (width < $resolution) {
+    @if $media == $size and $minmax == "max" {
+      @media only screen and (max-width: $resolution) {
         @content;
       }
     }

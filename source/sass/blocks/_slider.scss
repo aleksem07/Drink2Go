@@ -1,47 +1,72 @@
 .slider {
-  background: $color-flat-white;
+  position: relative;
 
-  @include media('max', 'md') {
+  @include media("max", "md") {
     // margin-top: -12px;
   }
 
-  @include media('min', 'md') {
+  @include media("min", "md") {
     margin-bottom: 198px;
     position: relative;
   }
 
-  @include media('min', 'xl') {
+  @include media("min", "xl") {
     margin-bottom: 49px;
   }
 }
 
 .slider .wrapper {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
   margin-inline: 0;
 }
 
+.slider .wrapper:not(:first-child) {
+  position: absolute;
+  top: 0;
+}
+
+.slide-hidden {
+  visibility: hidden;
+}
+
+.slider .decaf-flat {
+  background: $color-flat-white;
+}
+
+.slider .lavender-latte {
+  background: $color-lavender-latte;
+}
+
+.slider .espresso {
+  background: $color-espresso;
+}
+
+.swiper {
+  width: 100%;
+  height: 500px;
+}
+
 .wrapper__img:first-of-type {
   padding-left: 2%;
 
-  @include media('max', 'xl') {
+  @include media("max", "xl") {
     padding-left: 4%;
   }
 
-  @include media('max', 'md') {
+  @include media("max", "md") {
     padding-left: 0;
   }
 }
 .wrapper__img:last-of-type {
   padding-right: 2%;
 
-  @include media('max', 'xl') {
+  @include media("max", "xl") {
     padding-right: 4%;
   }
 
-  @include media('max', 'md') {
+  @include media("max", "md") {
     padding-right: 0%;
   }
 }
@@ -58,7 +83,11 @@
   }
 
   &:active {
-    background: linear-gradient(90deg, $color-base-primary 0%, transparent 100%);
+    background: linear-gradient(
+      90deg,
+      $color-base-primary 0%,
+      transparent 100%
+    );
   }
 
   &:disabled {
@@ -75,7 +104,11 @@
   }
 
   &:active {
-    background: linear-gradient(90deg, transparent 0%, $color-base-primary 100%);
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      $color-base-primary 100%
+    );
   }
 
   &:disabled {
@@ -104,13 +137,13 @@
   justify-items: center;
   grid-template-rows: 46% 2% 15% 17% 40px 64px;
 
-  @include media('min', 'md') {
+  @include media("min", "md") {
     position: relative;
     row-gap: 4px;
     grid-template-rows: 12% 14% 18% 40px 300px;
   }
 
-  @include media('min', 'xl') {
+  @include media("min", "xl") {
     column-gap: 29px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 28% 13% 18% 40px 256px;
@@ -121,13 +154,13 @@
 .slider__image {
   padding-top: 19px;
 
-  @include media('max', 'md') {
+  @include media("max", "md") {
     object-fit: none;
   }
 }
 
 .slider__title {
-  @include media('max', 'md') {
+  @include media("max", "md") {
     @include font(3.6rem, 48px, 700);
   }
 }
@@ -157,63 +190,63 @@
 }
 
 .slider__badge {
-  @include media('min', 'md') {
+  @include media("min", "md") {
     grid-row: 1 / 2;
     padding-top: 61px;
   }
 
-  @include media('min', 'xl') {
+  @include media("min", "xl") {
     padding-top: 181px;
   }
 }
 
 .slider__title {
-  @include media('min', 'md') {
+  @include media("min", "md") {
     margin-bottom: 11px;
     grid-row: 2 / 3;
     @include font(5.6rem, 8rem, 700);
   }
 
-  @include media('min', 'xl') {
+  @include media("min", "xl") {
     letter-spacing: 1px;
   }
 }
 
 .slider__description {
-  @include media('min', 'md') {
+  @include media("min", "md") {
     margin-bottom: 17px;
     max-width: 90%;
     grid-row: 3 / 4;
     @include font(2rem, 3.2rem, 400);
   }
 
-  @include media('min', 'xl') {
+  @include media("min", "xl") {
     max-width: 100%;
     text-align: start;
   }
 }
 
 .slider__description br {
-  @include media('max', 'md') {
+  @include media("max", "md") {
     display: none;
   }
 }
 
 .slider__buy {
-  @include media('min', 'md') {
+  @include media("min", "md") {
     grid-row: 4 / 5;
   }
 }
 
 .slider__image {
-  @include media('min', 'md') {
+  @include media("min", "md") {
     position: absolute;
     grid-row: 5 / 6;
     width: 476px;
     height: 490px;
   }
 
-  @include media('min', 'xl') {
+  @include media("min", "xl") {
     margin-top: 14px;
     margin-left: auto;
     width: 600px;
@@ -233,7 +266,7 @@
   bottom: 9.5%;
   transform: translate(-50%, 0);
 
-  @include media('max', 'xl') {
+  @include media("max", "xl") {
     display: none;
   }
 }

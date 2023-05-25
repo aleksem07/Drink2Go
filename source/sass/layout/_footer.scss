@@ -21,23 +21,23 @@
   width: 100%;
   height: 420px;
 
-  @include media('min', 'md') {
+  @include media("min", "md") {
     height: 480px;
   }
 
-  @include media('min', 'xl') {
+  @include media("min", "xl") {
     height: 540px;
   }
 }
 
 .footer__info > .wrapper {
-  @include media('min', 'md') {
+  @include media("min", "md") {
     display: flex;
     flex-wrap: wrap;
     column-gap: 11.5%;
   }
 
-  @include media('min', 'xl') {
+  @include media("min", "xl") {
     padding-top: 38px;
     align-items: start;
     column-gap: 3px;
@@ -46,7 +46,7 @@
 
 //divider
 .footer__item {
-  @include media('max', 'md') {
+  @include media("max", "md") {
     border-bottom: 1px solid $color-base-secondary;
     padding-top: 23px;
     padding-bottom: 8px;
@@ -54,7 +54,7 @@
 }
 
 .footer__item:nth-child(2) {
-  @include media('max', 'md') {
+  @include media("max", "md") {
     border-top: 1px solid $color-base-secondary;
   }
 }
@@ -89,13 +89,13 @@
   justify-content: space-between;
   align-items: center;
 
-  @include media('min', 'md') {
+  @include media("min", "md") {
     padding-top: 36px;
     padding-bottom: 30px;
     width: 100%;
   }
 
-  @include media('min', 'xl') {
+  @include media("min", "xl") {
     padding-top: 0;
     max-width: 25.5%;
     row-gap: 50px;
@@ -127,17 +127,17 @@
 }
 
 .footer__social-list .social__item:not(:last-child) {
-  @include media('min', 'md') {
+  @include media("min", "md") {
     margin-right: 13px;
   }
 }
 
 .media {
-  @include media('min', 'md') {
+  @include media("min", "md") {
     padding-left: 15px;
   }
 
-  @include media('min', 'xl') {
+  @include media("min", "xl") {
     padding-left: 25px;
   }
 }
@@ -146,7 +146,7 @@
   padding-bottom: 9px;
   position: relative;
 
-  @include media('min', 'xl') {
+  @include media("min", "xl") {
     padding-top: 7px;
   }
 }
@@ -174,7 +174,7 @@
 
 .contacts__adress::before,
 .contacts__phone::before {
-  content: '';
+  content: "";
   width: 13px;
   height: 16px;
   position: absolute;
@@ -184,11 +184,11 @@
 }
 
 .contacts__adress::before {
-  background: url('../img/icons/contacts.webp');
+  background: url("/img/icons/contacts.png");
 }
 
 .contacts__phone::before {
-  background: url('../img/icons/phone.webp');
+  background: url("/img/icons/phone.png");
 }
 
 //colpyright
@@ -197,12 +197,12 @@
   padding-block: 20px;
   text-align: center;
 
-  @include media('min', 'md') {
+  @include media("min", "md") {
     padding-top: 15px;
     width: 100%;
   }
 
-  @include media('min', 'xl') {
+  @include media("min", "xl") {
     padding-top: 4px;
   }
 }
@@ -230,7 +230,7 @@
   height: 36px;
   min-width: 82px;
 
-  @include media('min', 'xl') {
+  @include media("min", "xl") {
     margin-bottom: 10px;
   }
 }
@@ -241,18 +241,18 @@
 }
 
 .footer__item {
-  @include media('min', 'md') {
+  @include media("min", "md") {
     max-width: 30%;
   }
 
-  @include media('min', 'xl') {
+  @include media("min", "xl") {
     padding-top: 8px;
     max-width: 21%;
   }
 }
 
 .footer__item:not(:nth-child(4)) {
-  @include media('min', 'xl') {
+  @include media("min", "xl") {
     margin-right: 170px;
   }
 }

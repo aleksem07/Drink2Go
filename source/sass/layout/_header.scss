@@ -11,22 +11,22 @@
   @include media('min', 'md') {
     padding-block: 22px;
   }
+}
 
-  & .wrapper {
-    margin-inline: 2.9%;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
+.header .wrapper {
+  margin-inline: 2.9%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
 
-    @include media('max', 'md') {
-      display: block;
-    }
+  @include media('max', 'md') {
+    display: block;
+  }
 
-    @include media('min', 'md') {
-      justify-content: start;
-      align-items: center;
-      column-gap: 9%;
-    }
+  @include media('min', 'md') {
+    justify-content: start;
+    align-items: center;
+    column-gap: 9%;
   }
 }
 

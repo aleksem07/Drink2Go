@@ -1,20 +1,8 @@
 {
-  "extends": [
-    "stylelint-config-htmlacademy"
-  ],
-  "plugins": ["stylelint-order", "stylelint-scss"],
-  "customSyntax": "postcss-less",
+  "extends": "stylelint-config-htmlacademy",
 
   "rules": {
     "declaration-no-important": true,
-    "indentation": [2, {"ignore": ["inside-parens"]}],
-    "no-duplicate-selectors": true,
-    "selector-class-pattern": null,
-    "property-no-vendor-prefix": null,
-    "no-descending-specificity": null,
-    "scss/dollar-variable-pattern": ["/^foo-/", {"ignore": "global"}] ,
-    "declaration-property-value-blacklist": {
-    "/^border/": []
-      }
-    }
+    "indentation": [2, {"ignore": ["inside-parens"]}]
+  }
 }

@@ -1,22 +1,12 @@
 section.slider
-  .wrapper
-    button.wrapper__img
-      img.slider__arrow-left(src="img/icons/arrow_left.webp")
-    .slider__content
-      img.slider__image(src="img/slider/flat_white.webp")
-      h4.h4.slider__badge.badge Новинка!
-      h2.h2.slider__title Декаф Флэт Уайт
-      p.slider__description.description Свежесваренный кофе без кофеина из Эфиопии #[br] с натуральным фермерским молоком — то, что нужно#[br] для расслабления после тяжёлого рабочего дня
-      .slider__buy.buy
-        s.buy__old-price 295₽
-        p.buy__new-price.actual-price 225₽
-        +button("Заказать")
-    button.wrapper__img
-      img.slider__arrow-right(src="img/icons/arrow_right.webp")
-    ul.slider__pagination
-      li.slider__pafination-item
-        button.slider__pagination-button.active
-      li.slider__pafination-item
-        button.slider__pagination-button
-      li.slider__pafination-item
-        button.slider__pagination-button
+  +slider-image('Декаф Флэт Уайт', 'Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня', ' 295₽', '225₽', 'flat_white')(class="decaf-flat")
+  +slider-image('Лавандовый Латте', 'Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор', ' 285₽', '265₽', 'lavender')(class="lavender-latte")
+  +slider-image('Тройной Эспрессо', 'Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость', ' 395₽', '375₽', 'espresso')(class="espresso ")
+
+  ul.slider__pagination
+    li.slider__pafination-item
+      button.slider__pagination-button.active
+    li.slider__pafination-item
+      button.slider__pagination-button
+    li.slider__pafination-item
+      button.slider__pagination-button

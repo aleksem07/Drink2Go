@@ -10,7 +10,7 @@ mixin social-link(title, svgName, href)
     a.menu-nav__link.menu-user__link(href=href rel="noopener noreferrer")
       h2.visually-hidden #{title}
       <svg width="20" height="20" viewBox="0 0 19 19">
-      <use xlink:href="img/sprite.svg##{svgName}"></use>
+      <use xlink:href="img/stack.svg##{svgName}"></use>
       </svg>
 
 mixin user-nav(title, svgName, href)
@@ -18,7 +18,7 @@ mixin user-nav(title, svgName, href)
     a.menu-nav__link.menu-user__link(href=href rel="noopener noreferrer")
       h2.visually-hidden #{title}
       <svg width="17" height="17" viewBox="0 0 17 17">
-      <use xlink:href="img/sprite.svg##{svgName}"></use>
+      <use xlink:href="img/stack.svg##{svgName}"></use>
       </svg>
       span.menu-user__link-title #{title}
 
@@ -28,7 +28,7 @@ mixin social(svg, title, href='#')
     a.social__link(href=href)
     svg(width='26.5' height="26.5" viewBox="0 0 26.5 26.5")
       .
-        <use xlink:href="img/sprite.svg##{svg}"></use>
+        <use xlink:href="img/stack.svg##{svg}"></use>
 
 mixin button(text)
   button.button(type='button')&attributes(attributes)
@@ -43,7 +43,7 @@ mixin footer-store(title, href)
 
 mixin features(src, title, description)
   li.features__item.feature&attributes(attributes)
-    img.feature__img(src=`img/features/${src}.webp` width=52 height=56 alt='')
+    img.feature__img(src=`img/features/${src}.png` width=52 height=56 alt='')
     h3.h3.feature__title #{title}
     p.feature__description #{description}
     if block
@@ -51,8 +51,47 @@ mixin features(src, title, description)
 
 mixin card(src, title, description, price)
   li.card__item.card
-    img.card__image(src=`img/catalog/${src}.webp` width=130 height=188 alt='Баночка кофе')
+    img.card__image(src=`img/catalog/${src}.png` srcset=`
+    img/catalog/${src}.png 1x,
+    img/catalog/${src}@x2.png 2x'`
+    width=130 height=188 alt=`Баночка кофе ${title}` )
     h3.h3.card__title #{title}
     p.card__description #{description}
     p.card__price.actual-price #{price}
     +button('В корзину')(class="card__button")
+
+mixin slider-image(title, desc, oldPrice, newPrice, img)
+  .wrapper&attributes(attributes)
+    button.wrapper__img.slider--left
+      img.slider__arrow-left(src="img/icons/arrow_left.png")
+    .slider__content
+      picture.slider__image
+
+        //- Не использовал webp, тк плохо читаются надписи на банках
+        //- source(type="image/webp" srcset=`
+        //- img/slider/${img}.webp 1x,
+        //- img/slider/${img}@x2.webp 2x'`
+        //- alt=`Баночка кофе ${title}`)
+
+        source(media='(min-width: 1440px)' srcset=`
+        img/slider/${img}_desktop.png 1x,
+        img/slider/${img}_desktop@x2.png 2x'` width='600px' height='600px' alt=`Баночка кофе ${title}`)
+
+        source(media='(min-width: 768px)' srcset=`
+        img/slider/${img}_tablet.png 1x,
+        img/slider/${img}_tablet@x2.png 2x'` width='476px' height='476px' alt=`Баночка кофе ${title}`)
+
+        img(src='img/slider/${img}.png'  srcset=`
+        img/slider/${img}.png 1x,
+        img/slider/${img}@x2.png 2x'`
+        width='280px' height='280px' alt=`Баночка кофе ${title}`)
+
+      h4.h4.slider__badge.badge Новинка!
+      h2.h2.slider__title #{title}
+      p.slider__description.description #{desc}
+      .slider__buy.buy
+        s.buy__old-price #{oldPrice}
+        p.buy__new-price.actual-price #{newPrice}
+        +button("Заказать")
+    button.wrapper__img.slider--right
+      img.slider__arrow-right(src="img/icons/arrow_right.png")
