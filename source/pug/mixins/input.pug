@@ -1,4 +1,4 @@
-mixin input(type, name, value, checked)
+mixin input(type, name, value, id, checked)
   if type === 'checkbox'
     .catalog-filter__box
       label.catalog-filter__label
@@ -7,5 +7,5 @@ mixin input(type, name, value, checked)
   if type === 'radio'
     .catalog-filter__box.catalog-filter__box--radio
       label.catalog-filter__label
-        input.catalog-filter__radio.visually-hidden&attributes(attributes)(name=name value=value id=name checked=checked type=type )
+        input.catalog-filter__radio.visually-hidden&attributes(attributes)(name=name value=value id=id checked=checked type=type )
         span.catalog-filter__title #{value}

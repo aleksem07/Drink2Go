@@ -31,6 +31,10 @@
   @include media("min", "xl") {
     width: 100%;
   }
+
+  @include media("max", "md") {
+    margin-right: 10%;
+  }
 }
 
 .footer__logo > .logo__img {
@@ -65,12 +69,6 @@
 
   @include media("min", "xl") {
     @include font(1.2rem, 1.6rem, 400);
-  }
-}
-
-.footer__logo {
-  @include media("max", "md") {
-    margin-right: 10%;
   }
 }
 

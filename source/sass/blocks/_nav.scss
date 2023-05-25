@@ -50,8 +50,9 @@
   }
 
   @include media("min", "md") {
-    min-width: max-content;
+    min-width: min-content;
     column-gap: 0;
+    flex-wrap: wrap;
   }
 
   @include media("min", "xl") {
@@ -120,23 +121,7 @@
   @include media("min", "md") {
     @include font(1.2rem, 1.6rem, 500);
   }
-}
 
-.menu-user__link {
-  padding: 22px;
-
-  &:active {
-    background: $color-base-secondary;
-
-    @include media("min", "xl") {
-      color: $color-base-primary;
-    }
-  }
-}
-
-/* link */
-
-.menu-site__item {
   &:first-child {
     @include media("max", "md") {
       margin-top: 11px;
@@ -152,6 +137,20 @@
     @include font(1.2rem, 1.6rem, 500);
   }
 }
+
+.menu-user__link {
+  padding: 22px;
+
+  &:active {
+    background: $color-base-secondary;
+
+    @include media("min", "xl") {
+      color: $color-base-primary;
+    }
+  }
+}
+
+/* link */
 
 .menu-site__link {
   @include media("min", "md") {

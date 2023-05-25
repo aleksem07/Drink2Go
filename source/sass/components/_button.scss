@@ -1,13 +1,13 @@
 /* button */
 
 .button {
-  width: 100%;
   transition: all 0.1s ease-in;
   background: $color-base-primary;
   color: $color-base-white;
   padding: 8px 20px;
   border: 2px solid transparent;
   border-radius: 4px;
+  width: fit-content;
 
   &:hover,
   &:focus {

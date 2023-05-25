@@ -59,6 +59,7 @@
     padding-left: 0;
   }
 }
+
 .wrapper__img:last-of-type {
   padding-right: 2%;
 
@@ -68,6 +69,25 @@
 
   @include media("max", "md") {
     padding-right: 0%;
+  }
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(90deg, transparent 0%, $color-light 100%);
+  }
+
+  &:active {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      $color-base-primary 100%
+    );
+  }
+
+  &:disabled {
+    background: transparent;
+    filter: grayscale(1) brightness(2);
+    border: none;
   }
 }
 
@@ -97,27 +117,6 @@
   }
 }
 
-.wrapper__img:last-of-type {
-  &:hover,
-  &:focus {
-    background: linear-gradient(90deg, transparent 0%, $color-light 100%);
-  }
-
-  &:active {
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      $color-base-primary 100%
-    );
-  }
-
-  &:disabled {
-    background: transparent;
-    filter: grayscale(1) brightness(2);
-    border: none;
-  }
-}
-
 .wrapper__img:disabled img {
   cursor: default;
 }
@@ -133,18 +132,18 @@
   display: grid;
   row-gap: 8px;
   justify-items: center;
-  grid-template-rows: 46% 2% 15% 17% 40px 64px;
+  grid-template-rows: 46% 2% auto auto 40px 64px;
 
   @include media("min", "md") {
     position: relative;
     row-gap: 4px;
-    grid-template-rows: 12% 14% 18% 40px 300px;
+    grid-template-rows: 12% auto auto 40px 300px;
   }
 
   @include media("min", "xl") {
     column-gap: 31px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 28% 13% 18% 40px 256px;
+    grid-template-rows: 28% auto auto 40px 256px;
     justify-items: start;
   }
 
@@ -159,11 +158,39 @@
   @include media("max", "md") {
     object-fit: none;
   }
+
+  @include media("min", "md") {
+    position: absolute;
+    grid-row: 5 / 6;
+    width: 476px;
+    height: 490px;
+  }
+
+  @include media("min", "xl") {
+    margin-top: 14px;
+    margin-left: 49px;
+    width: 600px;
+    height: 615px;
+    position: relative;
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+  }
 }
 
 .slider__title {
   @include media("max", "md") {
     @include font(3.6rem, 48px, 700);
+  }
+
+  @include media("min", "md") {
+    margin-bottom: 11px;
+    grid-row: 2 / 3;
+
+    @include font(5.6rem, 8rem, 700);
+  }
+
+  @include media("min", "xl") {
+    letter-spacing: 1px;
   }
 }
 
@@ -174,11 +201,34 @@
     margin-bottom: 0;
     padding-bottom: 21px;
   }
+
+  @include media("min", "md") {
+    margin-bottom: 17px;
+    max-width: 90%;
+    grid-row: 3 / 4;
+
+    @include font(2rem, 3.2rem, 400);
+  }
+
+  @include media("min", "xl") {
+    max-width: 100%;
+    text-align: start;
+  }
+}
+
+.slider__description br {
+  @include media("max", "md") {
+    display: none;
+  }
 }
 
 .slider__buy {
   display: flex;
   column-gap: 13px;
+
+  @include media("min", "md") {
+    grid-row: 4 / 5;
+  }
 }
 
 .buy__old-price,
@@ -204,63 +254,6 @@
 
   @include media("min", "xl") {
     padding-top: 181px;
-  }
-}
-
-.slider__title {
-  @include media("min", "md") {
-    margin-bottom: 11px;
-    grid-row: 2 / 3;
-    @include font(5.6rem, 8rem, 700);
-  }
-
-  @include media("min", "xl") {
-    letter-spacing: 1px;
-  }
-}
-
-.slider__description {
-  @include media("min", "md") {
-    margin-bottom: 17px;
-    max-width: 90%;
-    grid-row: 3 / 4;
-    @include font(2rem, 3.2rem, 400);
-  }
-
-  @include media("min", "xl") {
-    max-width: 100%;
-    text-align: start;
-  }
-}
-
-.slider__description br {
-  @include media("max", "md") {
-    display: none;
-  }
-}
-
-.slider__buy {
-  @include media("min", "md") {
-    grid-row: 4 / 5;
-  }
-}
-
-.slider__image {
-  @include media("min", "md") {
-    position: absolute;
-    grid-row: 5 / 6;
-    width: 476px;
-    height: 490px;
-  }
-
-  @include media("min", "xl") {
-    margin-top: 14px;
-    margin-left: 49px;
-    width: 600px;
-    height: 615px;
-    position: relative;
-    grid-column: 1 / 2;
-    grid-row: 1 / -1;
   }
 }
 

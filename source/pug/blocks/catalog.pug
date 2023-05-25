@@ -6,44 +6,46 @@ section.catalog
     h4.h4.catalog__badge.badge Каталог
     h2.h2.catalog__title Каталог кофейных напитков
     section.filter
-      form.filter__form.form(action="#")
+      h2.visually-hidden Фильтр
+      form.filter__form.form(method="get" action="https://echo.htmlacademy.ru")
 
         fieldset.form__section.form-slider
           legend.filter__price Цена
           .form__slider(id="form-slider")
           label.form__slider-min-label
-            input.form__slider-min-input(placeholder="0")
+            input.form__slider-min-input(type="number" name="minPrice" placeholder="0")
           span.form__slider-delimiter &ndash;
           label.form__slider-max-label
-            input.form__slider-max-input
+            input.form__slider-max-input(type="number" name="maxPrice"  )
 
         fieldset.form__section.milk.catalog-filter
           legend.filter__milk Наличие молока
-          +input('radio', 'milk', "Неважно", true)
-          +input('radio', 'milk', "Только животные")
-          +input('radio', 'milk', "Только растительное")
-          +input('radio', 'milk', "Без молока")(disabled)
+          +input('radio', 'milk', "Неважно", "doesntMatter", true)
+          +input('radio', 'milk',  "Только животные", "onlyAnimals")
+          +input('radio', 'milk', "Только растительное", "onlyVegetable")
+          +input('radio', 'milk', "Без молока", "withoutMilk")(disabled)
 
         fieldset.form__section.country.catalog-filter
           legend.filter__country Страна произрастания
-          +input('checkbox', 'country', "Бразилия", true)
-          +input('checkbox', 'country', "Эфиопия")
-          +input('checkbox', 'country', "Колумбия")
-          +input('checkbox', 'country', "Коста-Рика")
-          +input('checkbox', 'country', "Перу")(disabled)
+          +input('checkbox', 'Brazil', "Бразилия", '', true)
+          +input('checkbox', 'Ethiopia', "Эфиопия")
+          +input('checkbox', 'Colombia', "Колумбия")
+          +input('checkbox', 'CostaRica', "Коста-Рика")
+          +input('checkbox', 'Peru', "Перу")(disabled)
 
-        +button("Применить")(class='button-apply')
-        +button("Сбросить")(class='button-reset')
+        +button("Применить")(class='button-apply' type="submit")
+        +button("Сбросить")(class='button-reset' type="reset")
 
     section.cards
       .cards__sort-wrapper
         form.cards__select-wrapper.select
           p.select__h Сортировка:
           .select__wrapper(data-state="")
-            .select__title(data-default="Option 0") по умолчанию
+            button.select__title(data-default="Option 0") по умолчанию
             .select__content
-              label.select__label(for="singleSelect0") по умолчанию
-              input.select__input(id="singleSelect1" type="radio" name="singleSelect" checked)
+              input.select__input(id="singleSelect0" type="radio" name="singleSelect" )
+              label.select__label(for="singleSelect0")
+              input.select__input(id="singleSelect1" type="radio" name="singleSelect" )
               label.select__label(for="singleSelect1") по умолчанию
               input.select__input(id="singleSelect2" type="radio" name="singleSelect")
               label.select__label(for="singleSelect2") сначала дорогие

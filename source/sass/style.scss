@@ -1,20 +1,18 @@
-@use './abstract' as *;
-
+@import "./abstract";
 //global
-@import 'vendors/_normalize';
-@import 'base/_global';
-@import 'layout/_wrapper';
-@import 'components/_button';
-
+@import "vendors/_normalize";
+@import "base/_global";
+@import "layout/_wrapper";
+@import "components/_button";
 //blocks
-@import 'base/_page';
-@import 'base/_text';
-@import 'layout/_header';
-@import 'components/_logo';
-@import 'blocks/_nav';
-@import 'blocks/_slider';
-@import 'blocks/_features';
-@import 'blocks/_catalog';
-@import 'components/_select';
-
-@import 'layout/_footer';
+@import "base/_page";
+@import "base/_text";
+@import "layout/_header";
+@import "components/_logo";
+@import "blocks/_nav";
+@import "blocks/_slider";
+@import "blocks/_features";
+@import "blocks/_catalog";
+@import "components/_pagination";
+@import "components/_select";
+@import "layout/_footer";

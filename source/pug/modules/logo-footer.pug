@@ -5,16 +5,17 @@
 -var logoDesctop2x = "img/logo/logo_full@2x.webp";
 
 a.footer__logo.logo(href=pageClass === 'index-page' ? 'https://htmlacademy.ru/intensive/adaptive' : 'https://htmlacademy.ru/intensive/adaptive')(target="_blank")
+  p.visually-hidden Логотип компании
   .logo__img
     picture
       source(media='(min-width: 1440px)' srcset=`
       ${logoDesctop1x} 1x,
-      ${logoDesctop2x} 2x'` width='170px' height='36px' alt='Логотип компании')
+      ${logoDesctop2x} 2x` width='170' height='36')
       source(media='(min-width: 768px)' srcset=`
       ${logoDesctop1x} 1x,
-      ${logoDesctop2x} 2x'` width='170px' height='36px' alt='Логотип компании')
+      ${logoDesctop2x} 2x` width='170' height='36')
       img(src=logoTablet1x  srcset=`
       ${logoTablet1x} 1x,
-      ${logoTablet2x} 2x'`
-      width='82px' height='36px' alt='Логотип компании')
+      ${logoTablet2x} 2x`
+      width='82' height='36' alt="Логотип интернет-магазина")
   span.logo__text Интернет-магазин кофейных напитков

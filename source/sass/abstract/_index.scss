@@ -1,5 +1,5 @@
-@forward "./variables";
-@forward "./colors";
-@forward "./fonts";
-@forward "./mixins";
-@forward "./breakpoints";
+@import "./variables";
+@import "./colors";
+@import "./fonts";
+@import "./mixins";
+@import "./breakpoints";

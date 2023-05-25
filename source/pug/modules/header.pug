@@ -5,9 +5,9 @@ header.header
     include logo
 
     nav.header__menu.menu-nav.menu
-      //.menu__button--open - меняет состояние кнопки .menu__list--open - открывает меню
+      //.menu__button-(дефис)open - меняет состояние кнопки .menu__list-(дефис)open - открывает меню
 
-      button.menu-nav__button.menu__button.menu__button--open(type='button' aria-expanded='false' aria-controls='menu-nav__list')
+      button.menu-nav__button.menu__button.menu__button--open(type='button' aria-expanded='false')
         .
           <svg class="menu-nav__icon" aria-hidden="true" width="16" height="16">
               <use class="menu-nav__icon-menu" href="img/stack.svg#menu"></use>
