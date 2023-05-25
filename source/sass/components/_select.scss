@@ -14,7 +14,7 @@
     background: $color-base-secondary;
   }
 
-  &[data-state='active'] {
+  &[data-state="active"] {
     .select__title {
       &::before {
         transform: translate(-3px, -50%) rotate(-45deg);
@@ -47,7 +47,7 @@
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     right: 10px;
@@ -71,12 +71,13 @@
   display: flex;
   flex-direction: column;
   width: calc(100% + 10px);
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   background-color: $color-light;
   transition: all 0.3s ease-out;
   opacity: 0;
   color: $color-base-black;
+
   @include font(1.6rem, 2.4rem, 400);
 }
 

@@ -6,15 +6,28 @@
   flex: 0 1 140px;
   column-gap: 15%;
 
-  @include media('max', 'md') {
+  @include media("max", "md") {
     display: grid;
     grid-template-columns: 1fr min-content;
     grid-template-rows: max-content auto;
     column-gap: 0;
   }
 
-  @include media('min', 'md') {
+  @include media("min", "md") {
+    max-width: 85%;
+    width: 100%;
     column-gap: 0;
+    row-gap: 15px;
+    margin-left: auto;
+    flex-wrap: wrap;
+  }
+
+  @include media("max", "xl") {
+    max-width: 90%;
+  }
+
+  @include media("max", "md") {
+    max-width: 100%;
   }
 }
 
@@ -25,37 +38,35 @@
   column-gap: 44px;
   align-self: center;
   padding: 0;
-  margin: 0;
-  margin-right: auto;
   font-size: 12px;
   list-style: none;
 
-  @include media('max', 'md') {
-    column-gap: 0px;
+  @include media("max", "md") {
+    column-gap: 0;
     margin: 0;
     display: flex;
     justify-content: center;
     justify-self: end;
   }
 
-  @include media('min', 'md') {
+  @include media("min", "md") {
     min-width: max-content;
     column-gap: 0;
   }
 
-  @include media('min', 'xl') {
+  @include media("min", "xl") {
     column-gap: 19px;
   }
 }
 
 .menu-site {
-  @include media('max', 'md') {
+  @include media("max", "md") {
     display: none;
   }
 }
 
 .menu-site.menu__list--open {
-  @include media('max', 'md') {
+  @include media("max", "md") {
     display: grid;
     justify-content: center;
   }
@@ -67,34 +78,30 @@
   order: 3;
   display: flex;
 
-  @include media('max', 'md') {
+  @include media("max", "md") {
     grid-column: 1 / -1;
     width: 100%;
   }
 }
 
 .menu-user {
-  @include media('min', 'md') {
+  @include media("min", "md") {
     order: 4;
-    margin-left: 57px;
-  }
-
-  @include media('min', 'xl') {
-    margin-left: 21.5%;
+    margin-left: auto;
   }
 }
 
 .menu-user__item {
-  @include media('min', 'md') {
+  @include media("min", "md") {
     margin-right: 0;
   }
 
-  @include media('min', 'xl') {
+  @include media("min", "xl") {
     margin-right: 9px;
   }
 
   &:last-child {
-    @include media('min', 'xl') {
+    @include media("min", "xl") {
       margin-right: 0;
     }
   }
@@ -104,12 +111,13 @@
 
 .menu-nav__item {
   text-transform: uppercase;
+
   @include font(1.6rem, 125%, 400);
   text-align: center;
 }
 
 .menu-site__item {
-  @include media('min', 'md') {
+  @include media("min", "md") {
     @include font(1.2rem, 1.6rem, 500);
   }
 }
@@ -120,7 +128,7 @@
   &:active {
     background: $color-base-secondary;
 
-    @include media('min', 'xl') {
+    @include media("min", "xl") {
       color: $color-base-primary;
     }
   }
@@ -130,22 +138,23 @@
 
 .menu-site__item {
   &:first-child {
-    @include media('max', 'md') {
+    @include media("max", "md") {
       margin-top: 11px;
       border-top: 1px solid $color-base-secondary;
     }
   }
 
-  @include media('max', 'md') {
+  @include media("max", "md") {
     padding-block: 20px;
     border-bottom: 1px solid $color-base-secondary;
     width: 100vw;
+
     @include font(1.2rem, 1.6rem, 500);
   }
 }
 
 .menu-site__link {
-  @include media('min', 'md') {
+  @include media("min", "md") {
     padding: 32px;
     padding-inline: 21px;
   }
@@ -161,7 +170,7 @@
 }
 
 .menu-site__item:has(.menu-site__link:active) {
-  @include media('max', 'md') {
+  @include media("max", "md") {
     background: $color-base-secondary;
   }
 }
@@ -171,24 +180,26 @@
   border-bottom: 2px solid $color-base-primary;
   font-weight: bold;
 
-  @include media('max', 'md') {
+  @include media("max", "md") {
     border: none;
     color: $color-basic_font;
     font-weight: normal;
   }
 
-  @include media('min', 'md') {
+  @include media("min", "md") {
     padding-bottom: 32px;
     color: $color-base-primary;
   }
 }
 
 .menu-user__link-title {
-  @include media('max', 'xl') {
+  @include media("max", "xl") {
     display: none;
   }
-  @include media('min', 'xl') {
+
+  @include media("min", "xl") {
     margin-left: 3px;
+
     @include font(1.2rem, 1.6rem, 500);
   }
 }

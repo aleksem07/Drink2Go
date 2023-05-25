@@ -1,4 +1,4 @@
-@use './abstract' as *;
+@use "./abstract" as *;
 
 /* page */
 
@@ -16,9 +16,10 @@
   display: flex;
   flex-direction: column;
   color: $color-basic_font;
+
   @include font(1.6rem, 2rem);
 
-  @include media('min', 'md') {
+  @include media("min", "md") {
     min-width: $width-tablet;
   }
 }
@@ -29,7 +30,7 @@
   margin: 0 auto;
 }
 
-@include media('min', 'xl') {
+@include media("min", "xl") {
   .page-main {
     margin-inline: 41px 88px;
   }

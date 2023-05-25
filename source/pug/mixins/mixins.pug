@@ -50,11 +50,11 @@ mixin features(src, title, description)
       block
 
 mixin card(src, title, description, price)
-  li.card__item.card
+  li.card__item
     img.card__image(src=`img/catalog/${src}.png` srcset=`
     img/catalog/${src}.png 1x,
     img/catalog/${src}@x2.png 2x'`
-    width=130 height=188 alt=`Баночка кофе ${title}` )
+    width=130 height=188 alt=`Баночка кофе ${title}.` )
     h3.h3.card__title #{title}
     p.card__description #{description}
     p.card__price.actual-price #{price}
@@ -62,22 +62,18 @@ mixin card(src, title, description, price)
 
 mixin slider-image(title, desc, oldPrice, newPrice, img)
   .wrapper&attributes(attributes)
-    button.wrapper__img.slider--left
+    button.wrapper__img.slider__arrow-left
       img.slider__arrow-left(src="img/icons/arrow_left.png")
     .slider__content
       picture.slider__image
 
         //- Не использовал webp, тк плохо читаются надписи на банках
-        //- source(type="image/webp" srcset=`
-        //- img/slider/${img}.webp 1x,
-        //- img/slider/${img}@x2.webp 2x'`
-        //- alt=`Баночка кофе ${title}`)
 
-        source(media='(min-width: 1440px)' srcset=`
+        source(media='(min-width: 1439px)' srcset=`
         img/slider/${img}_desktop.png 1x,
         img/slider/${img}_desktop@x2.png 2x'` width='600px' height='600px' alt=`Баночка кофе ${title}`)
 
-        source(media='(min-width: 768px)' srcset=`
+        source(media='(min-width: 767px)' srcset=`
         img/slider/${img}_tablet.png 1x,
         img/slider/${img}_tablet@x2.png 2x'` width='476px' height='476px' alt=`Баночка кофе ${title}`)
 
@@ -93,5 +89,5 @@ mixin slider-image(title, desc, oldPrice, newPrice, img)
         s.buy__old-price #{oldPrice}
         p.buy__new-price.actual-price #{newPrice}
         +button("Заказать")
-    button.wrapper__img.slider--right
+    button.wrapper__img.slider__arrow-right
       img.slider__arrow-right(src="img/icons/arrow_right.png")

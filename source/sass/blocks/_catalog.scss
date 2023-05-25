@@ -27,7 +27,7 @@
 
   @include media("min", "xl") {
     grid-template-columns: 1fr 3fr;
-    column-gap: 8px;
+    column-gap: 10px;
   }
 }
 
@@ -42,21 +42,26 @@
 .catalog__title {
   margin-bottom: 19px;
   text-align: center;
-  letter-spacing: 0px;
+  letter-spacing: 0;
 
   @include media("min", "md") {
     margin-bottom: 23px;
   }
 
   @include media("min", "xl") {
-    margin-bottom: 40px;
+    margin-bottom: 36px;
     grid-column: 1 / -1;
   }
 }
 
 .filter__price {
   margin-bottom: 30px;
+
   @include font(1.6rem, 2.4rem, 600);
+
+  @include media("min", "xl") {
+    padding-top: 8px;
+  }
 }
 
 .cards {
@@ -91,18 +96,20 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    column-gap: 3.73%;
+    column-gap: 3.7%;
     row-gap: 28px;
   }
 
   @include media("min", "xl") {
-    column-gap: 2.63%;
+    column-gap: 2.6%;
   }
-}
 
-.card {
-  @include media("min", "md") {
-    max-width: 349px;
+  @include media("max", "xl") {
+    margin-bottom: 65px;
+  }
+
+  @include media("max", "md") {
+    margin-bottom: 36px;
   }
 }
 
@@ -129,18 +136,20 @@
   @include media("min", "xl") {
     &:hover,
     &:focus {
-      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
     }
   }
 }
 
 .card__item {
   @include media("min", "md") {
+    max-width: 349px;
     padding-inline: 27px;
     row-gap: 11px;
   }
 
   @include media("min", "xl") {
+    row-gap: 12px;
     margin-bottom: 3px;
     padding-top: 50px;
     padding-inline: 30px;
@@ -157,6 +166,7 @@
 
 .card__title {
   grid-column: 1 / -1;
+
   @include font(1.8rem, 3.2rem, 700);
 
   @include media("min", "md") {
@@ -167,6 +177,7 @@
 .card__description {
   max-width: 95%;
   grid-column: 1 / -1;
+
   @include font(1.4rem, 2rem, 400);
 
   @include media("min", "xl") {
@@ -209,6 +220,10 @@
     justify-content: end;
     column-gap: 20px;
   }
+
+  @include media("max", "xl") {
+    column-gap: 23px;
+  }
 }
 
 .form {
@@ -231,6 +246,10 @@
   @include media("min", "xl") {
     display: block;
   }
+
+  @include media("max", "xl") {
+    padding-bottom: 18px;
+  }
 }
 
 .form__slider {
@@ -240,6 +259,7 @@
     margin-bottom: 29px;
   }
 }
+
 .form-slider .form__slider {
   @include media("min", "md") {
     width: 87%;
@@ -250,19 +270,14 @@
   }
 }
 
-.form__slider-min-label,
-.form__slider-max-label {
-  outline: 2px solid $color-base-primary--lighter;
-  outline-offset: -1px;
-  border-radius: 4px;
-}
-
 .form__slider-min-input,
 .form__slider-max-input {
   padding: 7px;
   max-width: 43%;
   display: inline;
   text-align: center;
+  border: 3px solid $color-base-primary--lighter;
+  border-radius: 4px;
 
   @include media("min", "md") {
     max-width: 35%;
@@ -274,6 +289,10 @@
 
   &::placeholder {
     color: $color-base-grey;
+  }
+
+  @include media("max", "md") {
+    max-width: 40%;
   }
 }
 
@@ -298,12 +317,12 @@
   }
 
   @include media("min", "xl") {
-    margin-inline: 7% 4.5%;
+    margin-inline: 5.5%;
   }
 }
 
 .form__section:nth-child(1) {
-  padding-bottom: 34px;
+  padding-bottom: 30px;
 }
 
 .form__section:nth-child(2) {
@@ -501,9 +520,15 @@ input:focus + .catalog-filter__title::before {
 }
 
 //pagination
-
 .pagination {
   position: relative;
+
+  @include media("max", "md") {
+    @include media("max", "md") {
+      flex-wrap: wrap;
+      column-gap: 10px;
+    }
+  }
 }
 
 .pagination__item {
@@ -550,11 +575,11 @@ input:focus + .catalog-filter__title::before {
   color: $color-base-primary;
 }
 
-.pagination__link--active > .pagination__link {
+.pagination__item--active > .pagination__link {
   color: $color-base-black;
 }
 
-.pagination__link--active {
+.pagination__item--active {
   background: transparent;
   font-weight: 700;
   cursor: default;
@@ -564,7 +589,7 @@ input:focus + .catalog-filter__title::before {
   }
 }
 
-.pagination__link--active:hover .pagination__link {
+.pagination__item--active:hover .pagination__link {
   color: $color-base-black;
 }
 
@@ -596,8 +621,9 @@ input:focus + .catalog-filter__title::before {
   @include media("max", "md") {
     display: none;
   }
+
   @include media("min", "md") {
     width: min-content;
-    padding: 20px;
+    padding: 8px;
   }
 }

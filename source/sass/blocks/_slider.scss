@@ -124,8 +124,6 @@
 
 .slider__arrow-left,
 .slider__arrow-right {
-  width: 20px;
-  height: 20px;
   cursor: pointer;
   z-index: 1;
 }
@@ -144,10 +142,14 @@
   }
 
   @include media("min", "xl") {
-    column-gap: 29px;
+    column-gap: 31px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 28% 13% 18% 40px 256px;
     justify-items: start;
+  }
+
+  @include media("max", "md") {
+    row-gap: 6px;
   }
 }
 
@@ -167,6 +169,11 @@
 
 .slider__description {
   margin-bottom: 13px;
+
+  @include media("max", "md") {
+    margin-bottom: 0;
+    padding-bottom: 21px;
+  }
 }
 
 .slider__buy {
@@ -248,7 +255,7 @@
 
   @include media("min", "xl") {
     margin-top: 14px;
-    margin-left: auto;
+    margin-left: 49px;
     width: 600px;
     height: 615px;
     position: relative;

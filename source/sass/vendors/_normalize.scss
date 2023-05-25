@@ -21,9 +21,9 @@ $legacy_browser_support: false !default;
  */
 
 html {
-  font-family: sans-serif; /* 1 */
-  -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  font-family: sans-serif; /* 1 */ /* 2 */
+  text-size-adjust: 100%; /* 2 */
+
   @if $legacy_browser_support {
     *font-size: 100%; /* 3 */
   }
@@ -74,6 +74,7 @@ progress,
 video {
   display: inline-block; /* 1 */
   vertical-align: baseline; /* 2 */
+
   @if $legacy_browser_support {
     *display: inline;
     *zoom: 1;
@@ -199,8 +200,8 @@ h1 {
  */
 
 mark {
-  background: #ff0;
-  color: #000;
+  background: #ffff00;
+  color: #000000;
 }
 
 @if $legacy_browser_support {
@@ -225,9 +226,8 @@ mark {
    * Addresses `quotes` property not supported in Safari 4.
    */
 
-  q:before,
-  q:after {
-    content: '';
+  q::before,
+  q::after {
     content: none;
   }
 }
@@ -311,8 +311,9 @@ sub {
 
 img {
   border: 0;
+
   @if $legacy_browser_support {
-    *-ms-interpolation-mode: bicubic; /* 2 */
+    *interpolation-mode: bicubic; /* 2 */
   }
 }
 
@@ -362,8 +363,9 @@ kbd,
 pre,
 samp {
   font-family: monospace, monospace;
+
   @if $legacy_browser_support {
-    _font-family: 'courier new', monospace;
+    _font-family: "courier new", monospace;
   }
   font-size: 1em;
 }
@@ -392,8 +394,8 @@ textarea {
   color: inherit; /* 1 */
   font: inherit; /* 2 */
   margin: 0; /* 3 */
-  @if $legacy_browser_support {
-    vertical-align: baseline; /* 3 */
+
+  @if $legacy_browser_support { /* 3 */
     *vertical-align: middle; /* 3 */
   }
 }
@@ -432,8 +434,9 @@ button,
 html input[type="button"], /* 1 */
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button; /* 2 */
+  appearance: button; /* 2 */
   cursor: pointer; /* 3 */
+
   @if $legacy_browser_support {
     *overflow: visible; /* 4 */
   }
@@ -473,10 +476,11 @@ input {
  *  Known issue: excess padding remains in IE 6.
  */
 
-input[type='checkbox'],
-input[type='radio'] {
+input[type="checkbox"],
+input[type="radio"] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
+
   @if $legacy_browser_support {
     *height: 13px; /* 3 */
     *width: 13px; /* 3 */
@@ -489,8 +493,8 @@ input[type='radio'] {
  * decrement button to change from `default` to `text`.
  */
 
-input[type='number']::-webkit-inner-spin-button,
-input[type='number']::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -499,8 +503,8 @@ input[type='number']::-webkit-outer-spin-button {
  * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
  */
 
-input[type='search'] {
-  -webkit-appearance: textfield; /* 1 */
+input[type="search"] {
+  appearance: textfield; /* 1 */
   box-sizing: content-box; /* 2 */
 }
 
@@ -510,9 +514,9 @@ input[type='search'] {
  * padding (and `textfield` appearance).
  */
 
-input[type='search']::-webkit-search-cancel-button,
-input[type='search']::-webkit-search-decoration {
-  -webkit-appearance: none;
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  appearance: none;
 }
 
 /**
@@ -535,6 +539,7 @@ fieldset {
 legend {
   border: 0; /* 1 */
   padding: 0; /* 2 */
+
   @if $legacy_browser_support {
     white-space: normal; /* 3 */
     *margin-left: -7px; /* 4 */

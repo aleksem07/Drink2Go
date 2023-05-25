@@ -6,18 +6,17 @@
 }
 
 .header__logo {
-  @include media('max', 'md') {
+  @include media("max", "md") {
     position: absolute;
     top: 10px;
     left: 10px;
   }
 
-  @include media('min', 'md') {
+  @include media("min", "md") {
     margin-right: auto;
   }
 
-  @include media('min', 'xl') {
-    margin-right: 3%;
+  @include media("min", "xl") {
     display: flex;
     align-items: center;
     column-gap: 23px;
@@ -25,17 +24,17 @@
 }
 
 .footer__logo {
-  @include media('min', 'md') {
+  @include media("min", "md") {
     margin-right: auto;
   }
 
-  @include media('min', 'xl') {
+  @include media("min", "xl") {
     width: 100%;
   }
 }
 
 .footer__logo > .logo__img {
-  @include media('min', 'md') {
+  @include media("min", "md") {
     width: 170px;
     height: 36px;
   }
@@ -45,38 +44,38 @@
   width: 40px;
   height: 40px;
 
-  @include media('max', 'md') {
+  @include media("max", "md") {
     grid-row: span 2;
   }
 
-  @include media('min', 'md') {
+  @include media("min", "md") {
     width: 82px;
     height: 36px;
   }
 
-  @include media('min', 'xl') {
+  @include media("min", "xl") {
     width: 170px;
   }
 }
 
 .logo__text {
-  @include media('max', 'xl') {
+  @include media("max", "xl") {
     display: none;
   }
 
-  @include media('min', 'xl') {
+  @include media("min", "xl") {
     @include font(1.2rem, 1.6rem, 400);
   }
 }
 
 .footer__logo {
-  @include media('max', 'md') {
+  @include media("max", "md") {
     margin-right: 10%;
   }
 }
 
 .footer__logo .logo__text {
-  @include media('min', 'xl') {
+  @include media("min", "xl") {
     @include font(1.4rem, 2rem);
   }
 }

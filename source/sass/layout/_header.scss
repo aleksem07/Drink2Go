@@ -8,7 +8,7 @@
   background-color: transparent;
   margin: 0 auto;
 
-  @include media('min', 'md') {
+  @include media("min", "md") {
     padding-block: 22px;
   }
 }
@@ -16,17 +16,22 @@
 .header .wrapper {
   margin-inline: 2.9%;
   position: relative;
-  display: flex;
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
   justify-content: space-between;
 
-  @include media('max', 'md') {
+  @include media("max", "md") {
+    margin-left: 2.9%;
+    margin-right: 0;
     display: block;
   }
 
-  @include media('min', 'md') {
+  @include media("min", "md") {
+    row-gap: 25px;
     justify-content: start;
     align-items: center;
-    column-gap: 9%;
+
+    flex-wrap: wrap;
   }
 }
 
@@ -43,6 +48,7 @@
   position: relative;
   margin-top: 4px;
   margin-right: auto;
+
   @include font(1.6rem, 125%, 600);
 
   &::before {
@@ -51,9 +57,9 @@
     left: -25px;
     width: 21px;
     height: 21px;
-    background-image: url('../../img/icons/phone.svg');
+    background-image: url("../../img/icons/phone.svg");
     background-repeat: no-repeat;
     background-size: 20px 21px;
-    content: url('');
+    content: url("");
   }
 }

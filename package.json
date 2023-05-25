@@ -29,13 +29,15 @@
     "pug-cli": "1.0.0-alpha6",
     "sass": "1.56.1",
     "stylelint": "14.15.0",
-    "stylelint-config-htmlacademy": "1.1.2"
+    "stylelint-config-htmlacademy": "1.1.2",
+    "stylelint-prettier": "^1.1.2"
   },
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --custom-syntax postcss-scss",
+    "stylelint:fix": "stylelint '**/*{.css,.scss}' --fix",
     "w3c": "gulp validateMarkup --silent",
     "bemlinter": "gulp lintBem --silent",
     "lint": "npm run editorconfig && npm run stylelint && npm run w3c && npm run bemlinter",
@@ -64,5 +66,10 @@
   "type": "module",
   "dependencies": {
     "rename": "^1.0.4"
+  },
+"lint-staged": {
+    "*.(css|scss)": [
+      "stylelint --fix"
+    ]
   }
 }

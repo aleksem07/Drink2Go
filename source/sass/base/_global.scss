@@ -4,8 +4,8 @@ html {
 }
 
 img {
-  width: 100%;
-  object-fit: contain;
+  max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -84,7 +84,5 @@ article {
 // плавное затухание
 input:focus::placeholder {
   opacity: 0;
-  -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }

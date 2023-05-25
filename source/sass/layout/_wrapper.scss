@@ -1,7 +1,6 @@
 // центрирование контейнера
 [class*='__container'] {
   max-width: 87.5rem;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   margin: 0 auto;
 }
@@ -11,7 +10,7 @@
   margin: 0 auto;
   margin-inline: $wrapper-inline;
 
-  @include media('min', 'md') {
+  @include media("min", "md") {
     margin-inline: 2.6%;
   }
 }

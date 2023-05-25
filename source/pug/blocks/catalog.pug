@@ -17,14 +17,14 @@ section.catalog
           label.form__slider-max-label
             input.form__slider-max-input
 
-        fieldset.form__section.milk
+        fieldset.form__section.milk.catalog-filter
           legend.filter__milk Наличие молока
           +input('radio', 'milk', "Неважно", true)
           +input('radio', 'milk', "Только животные")
           +input('radio', 'milk', "Только растительное")
           +input('radio', 'milk', "Без молока")(disabled)
 
-        fieldset.form__section.country
+        fieldset.form__section.country.catalog-filter
           legend.filter__country Страна произрастания
           +input('checkbox', 'country', "Бразилия", true)
           +input('checkbox', 'country', "Эфиопия")
@@ -32,8 +32,8 @@ section.catalog
           +input('checkbox', 'country', "Коста-Рика")
           +input('checkbox', 'country', "Перу")(disabled)
 
-        +button("Применить")(class='button__apply')
-        +button("Сбросить")(class='button__reset')
+        +button("Применить")(class='button-apply')
+        +button("Сбросить")(class='button-reset')
 
     section.cards
       .cards__sort-wrapper
@@ -53,7 +53,7 @@ section.catalog
               label.select__label(for="singleSelect4") высокий рейтинг
 
 
-      ul.cards__list
+      ul.cards__list.card
         +card('coffee_can1', 'Декаф Флэт Уайт', 'Кофе без кофеина из Эфиопии с натуральным фермерским молоком', '225₽')
         +card('coffee_can2', 'Декаф Флэт Уайт', 'Кофе без кофеина из Эфиопии с натуральным фермерским молоком', '225₽')
         +card('coffee_can3', 'Декаф Флэт Уайт', 'Кофе без кофеина из Эфиопии с натуральным фермерским молоком', '225₽')

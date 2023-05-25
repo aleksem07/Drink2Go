@@ -29,16 +29,16 @@
       img/logo/logo@2x.webp 2x'" width="32px" height="36px" alt="Логотип компании">
             </picture>
           </div><span class="logo__text">Интернет-магазин <br> кофейных напитков</span></a>
-        <nav class="header__menu menu-nav">
+        <nav class="header__menu menu-nav menu">
           <!--.menu__button--open - меняет состояние кнопки .menu__list--open - открывает меню-->
-          <button class="menu-nav__button menu__button--open" type="button" aria-expanded="false" aria-controls="menu-nav__list">
+          <button class="menu-nav__button menu__button menu__button--open" type="button" aria-expanded="false" aria-controls="menu-nav__list">
             <svg class="menu-nav__icon" aria-hidden="true" width="16" height="16">
                 <use class="menu-nav__icon-menu" href="img/stack.svg#menu"></use>
                 <use class="menu-nav__icon-cross" href="img/stack.svg#cross"></use>
             </svg>
             
           </button>
-          <ul class="menu-nav__list menu-site menu__list--open">
+          <ul class="menu-nav__list menu-site menu__list menu__list--open">
                 <li class="menu-nav__item menu-site__item"><a class="menu-nav__link menu-site__link menu-site__link--active">Главная</a>
                 </li>
                 <li class="menu-nav__item menu-site__item"><a class="menu-nav__link menu-site__link" href="#" rel="noopener noreferrer">Каталог</a>
@@ -62,15 +62,16 @@
       </div>
     </header>
     <main class="index-page">
+      <h1 class="visually-hidden">Drink 2 go. Интернет-магазин кофейных напитков.</h1>
       <section class="slider">
             <div class="wrapper decaf-flat">
-              <button class="wrapper__img slider--left"><img class="slider__arrow-left" src="img/icons/arrow_left.png"></button>
+              <button class="wrapper__img slider__arrow-left"><img class="slider__arrow-left" src="img/icons/arrow_left.png"></button>
               <div class="slider__content">
                 <picture class="slider__image">
-                  <source media="(min-width: 1440px)" srcset="
+                  <source media="(min-width: 1439px)" srcset="
         img/slider/flat_white_desktop.png 1x,
         img/slider/flat_white_desktop@x2.png 2x'" width="600px" height="600px" alt="Баночка кофе Декаф Флэт Уайт">
-                  <source media="(min-width: 768px)" srcset="
+                  <source media="(min-width: 767px)" srcset="
         img/slider/flat_white_tablet.png 1x,
         img/slider/flat_white_tablet@x2.png 2x'" width="476px" height="476px" alt="Баночка кофе Декаф Флэт Уайт"><img src="img/slider/${img}.png" srcset="
         img/slider/flat_white.png 1x,
@@ -85,16 +86,16 @@
                       <button class="button" type="button"><span class="button__text">Заказать</span></button>
                 </div>
               </div>
-              <button class="wrapper__img slider--right"><img class="slider__arrow-right" src="img/icons/arrow_right.png"></button>
+              <button class="wrapper__img slider__arrow-right"><img class="slider__arrow-right" src="img/icons/arrow_right.png"></button>
             </div>
             <div class="wrapper lavender-latte">
-              <button class="wrapper__img slider--left"><img class="slider__arrow-left" src="img/icons/arrow_left.png"></button>
+              <button class="wrapper__img slider__arrow-left"><img class="slider__arrow-left" src="img/icons/arrow_left.png"></button>
               <div class="slider__content">
                 <picture class="slider__image">
-                  <source media="(min-width: 1440px)" srcset="
+                  <source media="(min-width: 1439px)" srcset="
         img/slider/lavender_desktop.png 1x,
         img/slider/lavender_desktop@x2.png 2x'" width="600px" height="600px" alt="Баночка кофе Лавандовый Латте">
-                  <source media="(min-width: 768px)" srcset="
+                  <source media="(min-width: 767px)" srcset="
         img/slider/lavender_tablet.png 1x,
         img/slider/lavender_tablet@x2.png 2x'" width="476px" height="476px" alt="Баночка кофе Лавандовый Латте"><img src="img/slider/${img}.png" srcset="
         img/slider/lavender.png 1x,
@@ -109,16 +110,16 @@
                       <button class="button" type="button"><span class="button__text">Заказать</span></button>
                 </div>
               </div>
-              <button class="wrapper__img slider--right"><img class="slider__arrow-right" src="img/icons/arrow_right.png"></button>
+              <button class="wrapper__img slider__arrow-right"><img class="slider__arrow-right" src="img/icons/arrow_right.png"></button>
             </div>
             <div class="wrapper espresso ">
-              <button class="wrapper__img slider--left"><img class="slider__arrow-left" src="img/icons/arrow_left.png"></button>
+              <button class="wrapper__img slider__arrow-left"><img class="slider__arrow-left" src="img/icons/arrow_left.png"></button>
               <div class="slider__content">
                 <picture class="slider__image">
-                  <source media="(min-width: 1440px)" srcset="
+                  <source media="(min-width: 1439px)" srcset="
         img/slider/espresso_desktop.png 1x,
         img/slider/espresso_desktop@x2.png 2x'" width="600px" height="600px" alt="Баночка кофе Тройной Эспрессо">
-                  <source media="(min-width: 768px)" srcset="
+                  <source media="(min-width: 767px)" srcset="
         img/slider/espresso_tablet.png 1x,
         img/slider/espresso_tablet@x2.png 2x'" width="476px" height="476px" alt="Баночка кофе Тройной Эспрессо"><img src="img/slider/${img}.png" srcset="
         img/slider/espresso.png 1x,
@@ -133,7 +134,7 @@
                       <button class="button" type="button"><span class="button__text">Заказать</span></button>
                 </div>
               </div>
-              <button class="wrapper__img slider--right"><img class="slider__arrow-right" src="img/icons/arrow_right.png"></button>
+              <button class="wrapper__img slider__arrow-right"><img class="slider__arrow-right" src="img/icons/arrow_right.png"></button>
             </div>
         <ul class="slider__pagination">
           <li class="slider__pafination-item">
@@ -187,7 +188,7 @@
                   <input class="form__slider-max-input">
                 </label>
               </fieldset>
-              <fieldset class="form__section milk">
+              <fieldset class="form__section milk catalog-filter">
                 <legend class="filter__milk">Наличие молока</legend>
                       <div class="catalog-filter__box catalog-filter__box--radio">
                         <label class="catalog-filter__label">
@@ -210,7 +211,7 @@
                         </label>
                       </div>
               </fieldset>
-              <fieldset class="form__section country">
+              <fieldset class="form__section country catalog-filter">
                 <legend class="filter__country">Страна произрастания</legend>
                       <div class="catalog-filter__box">
                         <label class="catalog-filter__label">
@@ -238,8 +239,8 @@
                         </label>
                       </div>
               </fieldset>
-                  <button class="button button__apply" type="button"><span class="button__text">Применить</span></button>
-                  <button class="button button__reset" type="button"><span class="button__text">Сбросить</span></button>
+                  <button class="button button-apply" type="button"><span class="button__text">Применить</span></button>
+                  <button class="button button-reset" type="button"><span class="button__text">Сбросить</span></button>
             </form>
           </section>
           <section class="cards">
@@ -262,50 +263,50 @@
                 </div>
               </form>
             </div>
-            <ul class="cards__list">
-                  <li class="card__item card"><img class="card__image" src="img/catalog/coffee_can1.png" srcset="
+            <ul class="cards__list card">
+                  <li class="card__item"><img class="card__image" src="img/catalog/coffee_can1.png" srcset="
     img/catalog/coffee_can1.png 1x,
-    img/catalog/coffee_can1@x2.png 2x'" width="130" height="188" alt="Баночка кофе Декаф Флэт Уайт">
+    img/catalog/coffee_can1@x2.png 2x'" width="130" height="188" alt="Баночка кофе Декаф Флэт Уайт.">
                     <h3 class="h3 card__title">Декаф Флэт Уайт</h3>
                     <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                     <p class="card__price actual-price">225₽</p>
                         <button class="button card__button" type="button"><span class="button__text">В корзину</span></button>
                   </li>
-                  <li class="card__item card"><img class="card__image" src="img/catalog/coffee_can2.png" srcset="
+                  <li class="card__item"><img class="card__image" src="img/catalog/coffee_can2.png" srcset="
     img/catalog/coffee_can2.png 1x,
-    img/catalog/coffee_can2@x2.png 2x'" width="130" height="188" alt="Баночка кофе Декаф Флэт Уайт">
+    img/catalog/coffee_can2@x2.png 2x'" width="130" height="188" alt="Баночка кофе Декаф Флэт Уайт.">
                     <h3 class="h3 card__title">Декаф Флэт Уайт</h3>
                     <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                     <p class="card__price actual-price">225₽</p>
                         <button class="button card__button" type="button"><span class="button__text">В корзину</span></button>
                   </li>
-                  <li class="card__item card"><img class="card__image" src="img/catalog/coffee_can3.png" srcset="
+                  <li class="card__item"><img class="card__image" src="img/catalog/coffee_can3.png" srcset="
     img/catalog/coffee_can3.png 1x,
-    img/catalog/coffee_can3@x2.png 2x'" width="130" height="188" alt="Баночка кофе Декаф Флэт Уайт">
+    img/catalog/coffee_can3@x2.png 2x'" width="130" height="188" alt="Баночка кофе Декаф Флэт Уайт.">
                     <h3 class="h3 card__title">Декаф Флэт Уайт</h3>
                     <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                     <p class="card__price actual-price">225₽</p>
                         <button class="button card__button" type="button"><span class="button__text">В корзину</span></button>
                   </li>
-                  <li class="card__item card"><img class="card__image" src="img/catalog/coffee_can4.png" srcset="
+                  <li class="card__item"><img class="card__image" src="img/catalog/coffee_can4.png" srcset="
     img/catalog/coffee_can4.png 1x,
-    img/catalog/coffee_can4@x2.png 2x'" width="130" height="188" alt="Баночка кофе Декаф Флэт Уайт">
+    img/catalog/coffee_can4@x2.png 2x'" width="130" height="188" alt="Баночка кофе Декаф Флэт Уайт.">
                     <h3 class="h3 card__title">Декаф Флэт Уайт</h3>
                     <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                     <p class="card__price actual-price">225₽</p>
                         <button class="button card__button" type="button"><span class="button__text">В корзину</span></button>
                   </li>
-                  <li class="card__item card"><img class="card__image" src="img/catalog/coffee_can5.png" srcset="
+                  <li class="card__item"><img class="card__image" src="img/catalog/coffee_can5.png" srcset="
     img/catalog/coffee_can5.png 1x,
-    img/catalog/coffee_can5@x2.png 2x'" width="130" height="188" alt="Баночка кофе Декаф Флэт Уайт">
+    img/catalog/coffee_can5@x2.png 2x'" width="130" height="188" alt="Баночка кофе Декаф Флэт Уайт.">
                     <h3 class="h3 card__title">Декаф Флэт Уайт</h3>
                     <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                     <p class="card__price actual-price">225₽</p>
                         <button class="button card__button" type="button"><span class="button__text">В корзину</span></button>
                   </li>
-                  <li class="card__item card"><img class="card__image" src="img/catalog/coffee_can6.png" srcset="
+                  <li class="card__item"><img class="card__image" src="img/catalog/coffee_can6.png" srcset="
     img/catalog/coffee_can6.png 1x,
-    img/catalog/coffee_can6@x2.png 2x'" width="130" height="188" alt="Баночка кофе Декаф Флэт Уайт">
+    img/catalog/coffee_can6@x2.png 2x'" width="130" height="188" alt="Баночка кофе Декаф Флэт Уайт.">
                     <h3 class="h3 card__title">Декаф Флэт Уайт</h3>
                     <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                     <p class="card__price actual-price">225₽</p>
@@ -314,11 +315,11 @@
             </ul>
             <ul class="pagination">
               <li class="pagination__item back"><a class="pagination__link pagination__link--arrow back" href="#" title="Перейти на предыдущую страницу">Назад</a><span class="visually-hidden">Перейти на предыдущую страницу</span></li>
-                    <li class="pagination__item arrow-mobile arrow-mobile__back"><a class="pagination__link pagination__link--arrow arrow arrow-left arrow-mobile__back" href="#" title="Перейти на предыдущую страницу"><span class="visually-hidden">Перейти на предыдущую страницу</span></a></li>
+                    <li class="pagination__item arrow-mobile arrow-mobile--back"><a class="pagination__link pagination__link--arrow arrow arrow-left arrow-mobile__back" href="#" title="Перейти на предыдущую страницу"><span class="visually-hidden">Перейти на предыдущую страницу</span></a></li>
                     <li class="pagination__item pagination__page"><a class="pagination__link" href="#" title="'Перейти на страницу № 1'">1</a></li>
-                    <li class="pagination__item pagination__link--active pagination__page"><a class="pagination__link" title="'Текущая страница № 2'">2</a></li>
+                    <li class="pagination__item pagination__item--active pagination__page"><a class="pagination__link" title="'Текущая страница № 2'">2</a></li>
                     <li class="pagination__item pagination__page"><a class="pagination__link" href="#" title="'Перейти на страницу № 3'">3</a></li>
-                    <li class="pagination__item arrow-mobile arrow-mobile__next"><a class="pagination__link pagination__link--arrow arrow arrow-right arrow-mobile__next" href="#" title="Перейти на следующую страницу"><span class="visually-hidden">Перейти на следующую страницу</span></a></li>
+                    <li class="pagination__item arrow-mobile arrow-mobile--next"><a class="pagination__link pagination__link--arrow arrow arrow-right arrow-mobile__next" href="#" title="Перейти на следующую страницу"><span class="visually-hidden">Перейти на следующую страницу</span></a></li>
               <li class="pagination__item next"><a class="pagination__link pagination__link--arrow next" href="#" title="Перейти на предыдущую страницу">Вперёд</a><span class="visually-hidden">Перейти на следующую страницу</span></li>
             </ul>
           </section>
@@ -329,7 +330,7 @@
       <div class="footer__map-leaflet" id="map-leaflet"></div>
       <div class="footer__info footer__list">
         <div class="wrapper">
-          <ul class="footer__block-list footer__social-list"><a class="footer__logo logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+          <ul class="footer__block-list footer__social-list social"><a class="footer__logo logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
               <div class="logo__img">
                 <picture>
                   <source media="(min-width: 1440px)" srcset="

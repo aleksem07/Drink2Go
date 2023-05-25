@@ -1,20 +1,22 @@
 .h2 {
   letter-spacing: 0.5px;
   text-align: center;
-  @include media('min', 'md') {
+
+  @include media("min", "md") {
     @include font(4.2rem, 6.4rem, 700);
   }
-  @include media('max', 'md') {
+
+  @include media("max", "md") {
     @include font(2.4rem, 3.6rem, 700);
   }
 }
 
 .h3 {
-  @include media('max', 'md') {
+  @include media("max", "md") {
     @include font(1.8rem, 3.2rem, 700);
   }
 
-  @include media('max', 'xl') {
+  @include media("max", "xl") {
     @include font(2.4rem, 3.6rem, 700);
   }
 }
