@@ -136,6 +136,10 @@
   @include media("min", "md") {
     margin-right: auto;
   }
+
+  @include media("min", "xl") {
+    margin-right: 10%;
+  }
 }
 
 .social__item {
