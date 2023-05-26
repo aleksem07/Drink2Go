@@ -11,7 +11,7 @@ $font-family-default: montserrat, "Open Sans", sans-serif;
   font-weight: 400;
   src: local("Montserrat"),
     url("/fonts/montserrat/Montserrat-Regular.woff2") format("woff2"),
-    url("/fonts/roboto/Montserrat-Regular.woff") format("woff");
+    url("/fonts/montserrat/Montserrat-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -21,7 +21,7 @@ $font-family-default: montserrat, "Open Sans", sans-serif;
   font-weight: 500;
   src: local("Montserrat"),
     url("/fonts/montserrat/Montserrat-Medium.woff2") format("woff2"),
-    url("/fonts/roboto/Montserrat-Medium.woff") format("woff");
+    url("/fonts/montserrat/Montserrat-Medium.woff") format("woff");
 }
 
 @font-face {
@@ -31,7 +31,7 @@ $font-family-default: montserrat, "Open Sans", sans-serif;
   font-weight: 600;
   src: local("Montserrat"),
     url("/fonts/montserrat/Montserrat-SemiBold.woff2") format("woff2"),
-    url("/fonts/roboto/Montserrat-SemiBold.woff") format("woff");
+    url("/fonts/montserrat/Montserrat-SemiBold.woff") format("woff");
 }
 
 @font-face {
@@ -41,7 +41,7 @@ $font-family-default: montserrat, "Open Sans", sans-serif;
   font-weight: 700;
   src: local("Montserrat"),
     url("/fonts/montserrat/Montserrat-Bold.woff2") format("woff2"),
-    url("/fonts/roboto/Montserrat-Bold.woff") format("woff");
+    url("/fonts/montserrat/Montserrat-Bold.woff") format("woff");
 }
 
 @font-face {
@@ -51,5 +51,5 @@ $font-family-default: montserrat, "Open Sans", sans-serif;
   font-weight: 800;
   src: local("Montserrat"),
     url("/fonts/montserrat/Montserrat-ExtraBold.woff2") format("woff2"),
-    url("/fonts/roboto/Montserrat-ExtraBold.woff") format("woff");
+    url("/fonts/montserrat/Montserrat-ExtraBold.woff") format("woff");
 }
