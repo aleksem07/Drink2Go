@@ -141,6 +141,10 @@
 .menu-user__link {
   padding: 22px;
 
+  @include media("min", "xl") {
+    padding: 30px 16px;
+  }
+
   &:active {
     background: $color-base-secondary;
 

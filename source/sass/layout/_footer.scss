@@ -123,6 +123,19 @@
     flex-wrap: wrap;
     justify-content: start;
   }
+
+  @include media("max", "md") {
+    padding-bottom: 0;
+    align-items: flex-start;
+  }
+}
+
+.footer__social-list li:first-child {
+  margin-right: 10%;
+
+  @include media("min", "md") {
+    margin-right: auto;
+  }
 }
 
 .social__item {
@@ -229,6 +242,10 @@
 
   @include media("min", "xl") {
     padding-top: 4px;
+  }
+
+  @include media("max", "md") {
+    padding-block: 14px;
   }
 }
 

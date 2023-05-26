@@ -160,10 +160,12 @@
   padding-bottom: 19px;
   grid-column: 1 / -1;
   justify-self: center;
+  cursor: pointer;
 }
 
 .card__title {
   grid-column: 1 / -1;
+  cursor: pointer;
 
   @include font(1.8rem, 3.2rem, 700);
 
@@ -307,7 +309,7 @@
 }
 
 .form__slider-delimiter {
-  margin-inline: 7% 2.5%;
+  margin-inline: 7% 6%;
 
   @include media("min", "md") {
     margin-inline: 7% 9.5%;
@@ -320,6 +322,10 @@
 
 .form__section:nth-child(1) {
   padding-bottom: 30px;
+
+  @include media("max", "md") {
+    padding-bottom: 33px;
+  }
 }
 
 .form__section:nth-child(2) {

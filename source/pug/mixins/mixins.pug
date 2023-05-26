@@ -71,15 +71,15 @@ mixin slider-image(title, desc, oldPrice, newPrice, img)
 
         source(media='(min-width: 1439px)' srcset=`
         img/slider/${img}_desktop.png 1x,
-        img/slider/${img}_desktop@x2.png 2x` width='600' height='600')
+        img/slider/${img}_desktop@2x.png 2x` width='600' height='600')
 
         source(media='(min-width: 767px)' srcset=`
         img/slider/${img}_tablet.png 1x,
-        img/slider/${img}_tablet@x2.png 2x` width='476' height='476')
+        img/slider/${img}_tablet@2x.png 2x` width='476' height='476')
 
         img(src=`img/slider/${img}.png`  srcset=`
         img/slider/${img}.png 1x,
-        img/slider/${img}@x2.png 2x`
+        img/slider/${img}@2x.png 2x`
         width='280' height='280' alt=`Баночка кофе ${title}.`)
 
       h4.h4.slider__badge.badge Новинка!

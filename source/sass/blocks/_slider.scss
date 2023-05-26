@@ -142,8 +142,9 @@
 
   @include media("min", "xl") {
     column-gap: 31px;
+    row-gap: 8px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 28% auto auto 40px 256px;
+    grid-template-rows: 27% auto auto 40px 240px;
     justify-items: start;
   }
 

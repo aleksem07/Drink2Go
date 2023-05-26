@@ -12,6 +12,10 @@
     padding-block: 22px;
     padding-top: 31px;
   }
+
+  @include media("min", "xl") {
+    padding-block: 22px;
+  }
 }
 
 .header .wrapper {

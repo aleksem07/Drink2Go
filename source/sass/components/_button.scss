@@ -8,6 +8,7 @@
   border: 2px solid transparent;
   border-radius: 4px;
   width: fit-content;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -21,7 +22,8 @@
 
 .form .button {
   @include media("max", "md") {
-    max-width: 96%;
+    max-width: 100%;
+    width: 100%;
   }
 }
 
@@ -82,6 +84,10 @@
     margin-left: 46%;
     grid-column: 1 / 3;
     grid-row: 2 /3;
+  }
+
+  @include media("max", "md") {
+    margin-bottom: 21px;
   }
 }
 
